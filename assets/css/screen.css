@@ -74,7 +74,7 @@ body {
 /* Centered content container blocks */
 .inner {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1140px;
     width: 100%;
 }
 
@@ -112,7 +112,6 @@ body {
 .site-header-background {
     position: relative;
     margin-top: 64px;
-    padding-bottom: 12px;
     color: #fff;
     background: color-mod(var(--darkgrey) l(-5%)) no-repeat center center;
     background-size: cover;
@@ -373,10 +372,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 21px;
 }
 
-.site-home-header .site-nav-logo {
-    display: none;
-}
-
 .site-nav-content {
     position: relative;
     align-self: flex-start;
@@ -389,7 +384,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0 -12px;
     padding: 0;
     list-style: none;
-    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav li {
@@ -421,7 +415,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     height: 1px;
     background: #fff;
     opacity: 0.25;
-    transition: all 0.35s ease-in-out;
 }
 
 .nav li a:hover:before {
@@ -445,7 +438,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     text-transform: none;
     opacity: 0;
     transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
-    transform: translateY(175%);
 }
 
 .nav-post-title.dash {
@@ -564,18 +556,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 /* Special behaviors for home navigation */
 
-.home-template .site-nav-main {
-    z-index: 100;
-}
-
-.home-template .site-nav-main .site-nav {
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-}
-
-.home-template .site-nav-main .fixed-nav-active {
-    opacity: 1;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.05s;
+.home-template .site-main {
+    padding-top: 64px !important;
 }
 
 @media (max-width: 700px) {
@@ -1009,7 +991,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-image img {
-    max-width: 1040px;
+    max-width: 1140px;
     width: 100%;
     height: auto;
 }
@@ -1120,10 +1102,10 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1040px;
+    max-width: 1140px;
     height: auto;
 }
-@media (max-width: 1040px) {
+@media (max-width: 1140px) {
     .post-full-content img,
     .post-full-content video {
         width: 100%;
@@ -1555,80 +1537,6 @@ Usage (In Ghost editor):
     transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99) 700ms;
 }
 
-.author-list-item .author-card {
-    position: absolute;
-    bottom: 130%;
-    left: 50%;
-    z-index: 600;
-    display: flex;
-    justify-content: space-between;
-    margin-left: -200px;
-    width: 400px;
-    font-size: 1.4rem;
-    line-height: 1.5em;
-    background: white;
-    border-radius: 3px;
-    box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px;
-    opacity: 0;
-    transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    transform: scale(0.98) translateY(15px);
-    pointer-events: none;
-}
-
-.author-list-item .author-card:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    display: block;
-    margin-left: -8px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid #fff;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
-}
-
-.author-list-item .author-card.hovered {
-    opacity: 1.0;
-    transform: scale(1) translateY(0px);
-    pointer-events: auto;
-}
-
-.author-card {
-    padding: 20px 20px 22px;
-}
-
-.author-card .author-info {
-    flex: 1 1 auto;
-    padding: 0 0 0 20px;
-}
-
-.author-card .author-info h2 {
-    margin: 8px 0 0;
-    font-size: 1.6rem;
-}
-
-.author-card .author-info p {
-    margin: 4px 0 0;
-    color: color-mod(var(--midgrey) l(-10%));
-}
-
-.author-card .author-info .bio h2 {
-    margin-top: 0;
-}
-
-.author-card .author-info .bio p {
-    margin-top: 0.8em;
-}
-
-.author-card .author-profile-image {
-    flex: 0 0 60px;
-    margin: 0;
-    width: 60px;
-    height: 60px;
-    border: none;
-}
 
 .basic-info .avatar-wrapper {
     position: relative;
@@ -1644,23 +1552,6 @@ Usage (In Ghost editor):
     width: 60px;
     height: 60px;
     opacity: 0.15;
-}
-
-@media (max-width: 1170px) {
-    .author-list-item .author-card {
-        margin-left: -50px;
-        width: 430px;
-    }
-
-    .author-list-item .author-card:before {
-        left: 50px;
-    }
-}
-
-@media (max-width: 650px) {
-    .author-list-item .author-card {
-        display: none;
-    }
 }
 
 @media (max-width: 500px) {
@@ -2084,7 +1975,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content .kg-width-wide .kg-image {
-    max-width: 1040px;
+    max-width: 1140px;
 }
 
 .post-full-content .kg-width-full .kg-image {
@@ -2113,7 +2004,7 @@ Usage (In Ghost editor):
     font-size: 75%;
     line-height: 1.5em;
     text-align: center;
-    max-width: 1040px;
+    max-width: 1140px;
 }
 
 .kg-width-full figcaption {
@@ -2132,7 +2023,7 @@ Usage (In Ghost editor):
 }
 
 
-@media (max-width: 1040px) {
+@media (max-width: 1140px) {
     .post-full-content .kg-width-full .kg-image {
         width: 100vw;
     }
@@ -2141,7 +2032,7 @@ Usage (In Ghost editor):
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
-    max-width: 1040px;
+    max-width: 1140px;
     width: 100vw;
 }
 
@@ -2813,7 +2704,7 @@ Usage (In Ghost editor):
 .site-footer {
     position: relative;
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     color: #fff;
     background: color-mod(var(--darkgrey) l(-5%));
 }
@@ -2874,14 +2765,10 @@ Usage (In Ghost editor):
 
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {*/
     body {
         color: rgba(255, 255, 255, 0.75);
         background: var(--darkmode);
-    }
-
-    img {
-        opacity: 0.9;
     }
 
     .site-header-background:before {
@@ -2958,15 +2845,6 @@ Usage (In Ghost editor):
 
     .post-full-byline-meta h4 a:hover {
         color: #fff;
-    }
-
-    .author-list-item .author-card {
-        background: color-mod(var(--darkmode) l(+4%));
-        box-shadow: 0 12px 26px rgba(0,0,0,0.4);
-    }
-
-    .author-list-item .author-card:before {
-        border-top-color: color-mod(var(--darkmode) l(+4%));
     }
 
     .no-image .author-social-link a {
@@ -3096,4 +2974,4 @@ Usage (In Ghost editor):
     .subscribe-form .success .message-success {
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
-}
+/*}*/
