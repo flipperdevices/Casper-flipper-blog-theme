@@ -92,6 +92,7 @@ body {
 /* ---------------------------------------------------------- */
 
 @media (min-width: 900px) {
+
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
@@ -126,7 +127,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    background: rgba(0, 0, 0, 0.18);
 }
 
 .site-header-background:after {
@@ -139,7 +140,7 @@ body {
     z-index: 10;
     display: block;
     height: 140px;
-    background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 
 .site-header-background.no-image:before,
@@ -290,9 +291,9 @@ body {
     z-index: 100;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     overflow: hidden;
-    height: 64px;
+    height: 60px;
     font-size: 1.3rem;
 }
 
@@ -315,7 +316,7 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color-mod(var(--darkgrey) l(-5%) a(0)) 0%,color-mod(var(--darkgrey) l(-5%)) 100%);
+    background: linear-gradient(to right, color-mod(var(--darkgrey) l(-5%) a(0)) 0%, color-mod(var(--darkgrey) l(-5%)) 100%);
 }
 
 .site-nav-left {
@@ -326,12 +327,12 @@ body {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     margin-right: 10px;
-    padding: 10px 0 80px;
     font-weight: 500;
     letter-spacing: 0.2px;
-    text-transform: uppercase;
     white-space: nowrap;
-
+    font-size: 16px;
+    justify-content: space-between;
+    font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
     -ms-overflow-scrolling: touch;
 }
 
@@ -369,7 +370,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 21px;
+    height: 16px;
 }
 
 .site-nav-content {
@@ -378,8 +379,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .nav {
-    position: absolute;
-    z-index: 1000;
     display: flex;
     margin: 0 0 0 -12px;
     padding: 0;
@@ -395,26 +394,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .nav li a {
     position: relative;
     display: block;
-    padding: 12px 12px;
-    color: #fff;
-    opacity: 0.8;
+    padding: 12px 14px 10px;
+    color: var(--primary);
     transition: opacity 0.35s ease-in-out;
 }
 
 .nav li a:hover {
     text-decoration: none;
     opacity: 1;
-}
-
-.nav li a:before {
-    content: "";
-    position: absolute;
-    right: 100%;
-    bottom: 8px;
-    left: 12px;
-    height: 1px;
-    background: #fff;
-    opacity: 0.25;
 }
 
 .nav li a:hover:before {
@@ -535,7 +522,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 1;
 }
 
-.site-nav-right .nav + .subscribe-button {
+.site-nav-right .nav+.subscribe-button {
     margin-left: 24px;
 }
 
@@ -741,7 +728,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     white-space: nowrap;
     background: var(--darkgrey);
     border-radius: 3px;
-    box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     opacity: 0;
     transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: translateY(6px);
@@ -1012,12 +999,14 @@ make sure this only happens on large viewports / desktop-ish devices.
         padding: 0 11vw;
     }
 }
+
 @media (max-width: 800px) {
     .post-full-content {
         padding: 0 5vw;
         font-size: 1.8rem;
     }
 }
+
 @media (max-width: 500px) {
     .post-full-custom-excerpt {
         font-size: 1.9rem;
@@ -1051,7 +1040,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     margin: 0 0 1.5em 0;
     min-width: 100%;
 }
+
 @media (max-width: 500px) {
+
     .post-full-content p,
     .post-full-content ul,
     .post-full-content ol,
@@ -1105,7 +1096,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     max-width: 1140px;
     height: auto;
 }
+
 @media (max-width: 1140px) {
+
     .post-full-content img,
     .post-full-content video {
         width: 100%;
@@ -1135,7 +1128,7 @@ Usage (In Ghost editor):
 <small>Your image caption</small>
 
 */
-.post-full-content img + br + small {
+.post-full-content img+br+small {
     display: block;
     margin-top: -3em;
     margin-bottom: 1.5em;
@@ -1153,6 +1146,7 @@ Usage (In Ghost editor):
     padding: 0 1.5em;
     border-left: color-mod(var(--blue)) 3px solid;
 }
+
 @media (max-width: 500px) {
     .post-full-content blockquote {
         padding: 0 1.3em;
@@ -1175,7 +1169,7 @@ Usage (In Ghost editor):
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
-    font-weight: 400!important;
+    font-weight: 400 !important;
     background: var(--whitegrey);
     border-radius: 3px;
 }
@@ -1234,7 +1228,7 @@ Usage (In Ghost editor):
     transform: rotate(45deg);
 }
 
-.post-full-content hr + p {
+.post-full-content hr+p {
     margin-top: 1.2em;
 }
 
@@ -1254,9 +1248,11 @@ Usage (In Ghost editor):
     line-height: 1.25em;
     font-weight: 600;
 }
-.post-full-content p + h1 {
+
+.post-full-content p+h1 {
     margin-top: 0.8em;
 }
+
 @media (max-width: 800px) {
     .post-full-content h1 {
         font-size: 3.2rem;
@@ -1270,9 +1266,11 @@ Usage (In Ghost editor):
     line-height: 1.25em;
     font-weight: 600;
 }
-.post-full-content p + h2 {
+
+.post-full-content p+h2 {
     margin-top: 0.8em;
 }
+
 @media (max-width: 800px) {
     .post-full-content h2 {
         margin-bottom: 0.3em;
@@ -1287,9 +1285,11 @@ Usage (In Ghost editor):
     line-height: 1.3em;
     font-weight: 600;
 }
-.post-full-content h2 + h3 {
+
+.post-full-content h2+h3 {
     margin-top: 0.7em;
 }
+
 @media (max-width: 800px) {
     .post-full-content h3 {
         margin-bottom: 0.3em;
@@ -1303,12 +1303,15 @@ Usage (In Ghost editor):
     font-size: 2.5rem;
     font-weight: 600;
 }
-.post-full-content h2 + h4 {
+
+.post-full-content h2+h4 {
     margin-top: 0.7em;
 }
-.post-full-content h3 + h4 {
+
+.post-full-content h3+h4 {
     margin-top: 0;
 }
+
 @media (max-width: 800px) {
     .post-full-content h4 {
         margin-bottom: 0.3em;
@@ -1323,17 +1326,19 @@ Usage (In Ghost editor):
     padding: 0.4em 1em 0.9em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
+    font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
 }
+
 @media (min-width: 1180px) {
     .post-full-content h5 {
         max-width: 1060px;
         width: 100vw;
     }
 }
+
 @media (max-width: 800px) {
     .post-full-content h5 {
         margin-bottom: 1em;
@@ -1349,6 +1354,7 @@ Usage (In Ghost editor):
     font-size: 2.0rem;
     font-weight: 700;
 }
+
 @media (max-width: 800px) {
     .post-full-content h6 {
         font-size: 1.8rem;
@@ -1445,13 +1451,13 @@ Usage (In Ghost editor):
 }
 
 .post-full-content table td:first-child {
-    background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     background-size: 20px 100%;
     background-repeat: no-repeat;
 }
 
 .post-full-content table td:last-child {
-    background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
     background-position: 100% 0;
     background-size: 20px 100%;
     background-repeat: no-repeat;
@@ -1502,7 +1508,8 @@ Usage (In Ghost editor):
     font-size: 1.2rem;
     line-height: 1.2em;
     letter-spacing: 0.2px;
-    text-transform: uppercase;;
+    text-transform: uppercase;
+    ;
 }
 
 .post-full-byline-meta h4 {
@@ -1649,12 +1656,10 @@ Usage (In Ghost editor):
     line-height: 39px;
     font-weight: 400;
     text-align: center;
-    background: linear-gradient(
-    color-mod(var(--blue) whiteness(+7%)),
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color-mod(var(--blue) lightness(-4%) saturation(-10%))
-    );
+    background: linear-gradient(color-mod(var(--blue) whiteness(+7%)),
+            color-mod(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+            color-mod(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+            color-mod(var(--blue) lightness(-4%) saturation(-10%)));
     border-radius: 5px;
 
     -webkit-font-smoothing: subpixel-antialiased;
@@ -1970,7 +1975,7 @@ Usage (In Ghost editor):
 }
 
 /* Preventing full-width image overlap with post image.  */
-.post-full-image + .post-full-content .kg-content *:first-child .kg-image {
+.post-full-image+.post-full-content .kg-content *:first-child .kg-image {
     width: 100%;
 }
 
@@ -1986,10 +1991,10 @@ Usage (In Ghost editor):
     margin: 0.8em 0 2.3em;
 }
 
-.post-full-content h1 + figure,
-.post-full-content h2 + figure,
-.post-full-content h3 + figure,
-.post-full-content h4 + figure {
+.post-full-content h1+figure,
+.post-full-content h2+figure,
+.post-full-content h3+figure,
+.post-full-content h4+figure {
     margin-top: 2em;
 }
 
@@ -2057,10 +2062,10 @@ Usage (In Ghost editor):
     margin: 0 0 0 0.75em;
 }
 
-.kg-gallery-card + .kg-image-card.kg-width-wide,
-.kg-gallery-card + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-gallery-card,
-.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
+.kg-gallery-card+.kg-image-card.kg-width-wide,
+.kg-gallery-card+.kg-gallery-card,
+.kg-image-card.kg-width-wide+.kg-gallery-card,
+.kg-image-card.kg-width-wide+.kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
 }
 
@@ -2077,7 +2082,7 @@ Usage (In Ghost editor):
     width: 100%;
 }
 
-.kg-card + .kg-bookmark-card {
+.kg-card+.kg-bookmark-card {
     margin-top: 0;
 }
 
@@ -2187,15 +2192,16 @@ Usage (In Ghost editor):
         margin: 0.2em 0 1.3em;
     }
 
-    .post-full-content h1 + figure,
-    .post-full-content h2 + figure,
-    .post-full-content h3 + figure,
-    .post-full-content h4 + figure {
+    .post-full-content h1+figure,
+    .post-full-content h2+figure,
+    .post-full-content h3+figure,
+    .post-full-content h4+figure {
         margin-top: 0.9em;
     }
 }
 
 @media (max-width: 500px) {
+
     .post-full-content .kg-width-wide,
     .post-full-content .kg-width-full {
         margin-right: -5vw;
@@ -2268,7 +2274,7 @@ Usage (In Ghost editor):
     margin: -4px 0 0;
     width: 110px;
     height: 110px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
 }
 
 .author-header-content .author-bio {
@@ -2328,9 +2334,9 @@ Usage (In Ghost editor):
     padding: 6px 0;
 }
 
-.author-location + .author-stats:before,
-.author-stats + .author-social-link:before,
-.author-social-link + .author-social-link:before {
+.author-location+.author-stats:before,
+.author-stats+.author-social-link:before,
+.author-social-link+.author-social-link:before {
     content: "\2022";
     display: inline-block;
     margin: 0 12px;
@@ -2338,16 +2344,17 @@ Usage (In Ghost editor):
     opacity: 0.6;
 }
 
-.no-image .author-location + .author-stats:before,
-.no-image .author-stats + .author-social-link:before,
-.no-image .author-social-link + .author-social-link:before {
+.no-image .author-location+.author-stats:before,
+.no-image .author-stats+.author-social-link:before,
+.no-image .author-social-link+.author-social-link:before {
     color: var(--midgrey);
 }
 
 @media (max-width: 700px) {
+
     .author-location,
     .author-stats,
-    .author-stats + .author-social-link:first-of-type:before {
+    .author-stats+.author-social-link:first-of-type:before {
         display: none;
     }
 }
@@ -2382,9 +2389,9 @@ Usage (In Ghost editor):
         margin-top: 8px;
     }
 
-    .author-location + .author-stats:before,
-    .author-stats + .author-social-link:before,
-    .author-social-link + .author-social-link:before {
+    .author-location+.author-stats:before,
+    .author-stats+.author-social-link:before,
+    .author-social-link+.author-social-link:before {
         display: inline;
         margin: 0 6px;
     }
@@ -2450,12 +2457,15 @@ Usage (In Ghost editor):
     .error-content {
         padding-top: 24vw;
     }
+
     .error-code {
         font-size: 11.2rem;
     }
+
     .error-message {
         padding-bottom: 16vw;
     }
+
     .error-description {
         margin: 5px 0 0 0;
         font-size: 1.8rem;
@@ -2466,6 +2476,7 @@ Usage (In Ghost editor):
     .error-content {
         padding-top: 28vw;
     }
+
     .error-message {
         padding-bottom: 14vw;
     }
@@ -2575,7 +2586,7 @@ Usage (In Ghost editor):
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(9,10,11,0.97);
+    background: rgba(9, 10, 11, 0.97);
     opacity: 0;
     transition: opacity 0.2s ease-in;
     pointer-events: none;
@@ -2671,12 +2682,10 @@ Usage (In Ghost editor):
     line-height: 38px;
     font-weight: 400;
     text-align: center;
-    background: linear-gradient(
-    color-mod(var(--blue) whiteness(+7%)),
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-    color-mod(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-    color-mod(var(--blue) lightness(-4%) saturation(-10%))
-    );
+    background: linear-gradient(color-mod(var(--blue) whiteness(+7%)),
+            color-mod(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+            color-mod(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+            color-mod(var(--blue) lightness(-4%) saturation(-10%)));
     border-radius: 8px;
 
     -webkit-font-smoothing: subpixel-antialiased;
@@ -2714,16 +2723,16 @@ Usage (In Ghost editor):
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.3rem;
 }
 
 .site-footer-content a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .site-footer-content a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
 
@@ -2766,212 +2775,213 @@ Usage (In Ghost editor):
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
 /*@media (prefers-color-scheme: dark) {*/
-    body {
-        color: rgba(255, 255, 255, 0.75);
-        background: var(--darkmode);
-    }
+body {
+    color: rgba(255, 255, 255, 0.75);
+    background: var(--darkmode);
+}
 
-    .site-header-background:before {
-        background: rgba(0,0,0,0.6);
-    }
+.site-header-background:before {
+    background: rgba(0, 0, 0, 0.6);
+}
 
-    .post-feed {
-        background: var(--darkmode);
-    }
+.post-feed {
+    background: var(--darkmode);
+}
 
-    .post-card,
-    .post-card:hover {
-        border-bottom-color: color-mod(var(--darkmode) l(+8%));
-    }
+.post-card,
+.post-card:hover {
+    border-bottom-color: color-mod(var(--darkmode) l(+8%));
+}
 
-    .author-profile-image {
-        background: var(--darkmode);
-    }
+.author-profile-image {
+    background: var(--darkmode);
+}
 
-    .post-card-byline-content a {
-        color: rgba(255, 255, 255, 0.75);
-    }
+.post-card-byline-content a {
+    color: rgba(255, 255, 255, 0.75);
+}
 
-    .post-card-byline-content a:hover {
-        color: #fff;
-    }
+.post-card-byline-content a:hover {
+    color: #fff;
+}
 
-    .post-card-image {
-        background: var(--darkmode);
-    }
+.post-card-image {
+    background: var(--darkmode);
+}
 
-    .post-card-title {
-        color: rgba(255, 255, 255, 0.85);
-    }
+.post-card-title {
+    color: rgba(255, 255, 255, 0.85);
+}
 
-    .post-card-excerpt {
-        color: color-mod(var(--midgrey) l(+10%));
-    }
+.post-card-excerpt {
+    color: color-mod(var(--midgrey) l(+10%));
+}
 
-    .author-avatar,
-    .static-avatar {
-        border-color: color-mod(var(--darkgrey) l(+2%));
-    }
+.author-avatar,
+.static-avatar {
+    border-color: color-mod(var(--darkgrey) l(+2%));
+}
 
-    .site-main,
-    .post-template .site-main,
-    .page-template .site-main {
-        background: var(--darkmode);
-    }
+.site-main,
+.post-template .site-main,
+.page-template .site-main {
+    background: var(--darkmode);
+}
 
-    .post-full-content {
-        background: var(--darkmode);
-    }
+.post-full-content {
+    background: var(--darkmode);
+}
 
-    .post-full-title {
-        color: rgba(255, 255, 255, 0.9);
-    }
+.post-full-title {
+    color: rgba(255, 255, 255, 0.9);
+}
 
-    .post-full-custom-excerpt {
-        color: color-mod(var(--midgrey) l(+10%));
-    }
+.post-full-custom-excerpt {
+    color: color-mod(var(--midgrey) l(+10%));
+}
 
-    .post-full-image {
-        background-color: color-mod(var(--darkmode) l(+8%));
-    }
+.post-full-image {
+    background-color: color-mod(var(--darkmode) l(+8%));
+}
 
-    .post-full-byline {
-        border-top-color: color-mod(var(--darkmode) l(+15%));
-    }
+.post-full-byline {
+    border-top-color: color-mod(var(--darkmode) l(+15%));
+}
 
-    .post-full-byline-meta h4 a {
-        color: rgba(255, 255, 255, 0.75);
-    }
+.post-full-byline-meta h4 a {
+    color: rgba(255, 255, 255, 0.75);
+}
 
-    .post-full-byline-meta h4 a:hover {
-        color: #fff;
-    }
+.post-full-byline-meta h4 a:hover {
+    color: #fff;
+}
 
-    .no-image .author-social-link a {
-        color: rgba(255, 255, 255, 0.75);
-    }
+.no-image .author-social-link a {
+    color: rgba(255, 255, 255, 0.75);
+}
 
-    .post-full-content h1,
-    .post-full-content h2,
-    .post-full-content h3,
-    .post-full-content h4,
-    .post-full-content h6 {
-        color: rgba(255, 255, 255, 0.9);
-    }
+.post-full-content h1,
+.post-full-content h2,
+.post-full-content h3,
+.post-full-content h4,
+.post-full-content h6 {
+    color: rgba(255, 255, 255, 0.9);
+}
 
-    .post-full-content a {
-        color: #fff;
-        box-shadow: inset 0 -1px 0 #fff;
-    }
+.post-full-content a {
+    color: #fff;
+    box-shadow: inset 0 -1px 0 #fff;
+}
 
-    .post-full-content strong {
-        color: #fff;
-    }
+.post-full-content strong {
+    color: #fff;
+}
 
-    .post-full-content em {
-        color: #fff;
-    }
+.post-full-content em {
+    color: #fff;
+}
 
-    .post-full-content code {
-        color: #fff;
-        background: #000;
-    }
+.post-full-content code {
+    color: #fff;
+    background: #000;
+}
 
-    hr {
-        border-top-color: color-mod(var(--darkmode) l(+8%));
-    }
+hr {
+    border-top-color: color-mod(var(--darkmode) l(+8%));
+}
 
-    .post-full-content hr:after {
-        background: color(var(--darkmode) l(+8%));
-        box-shadow: var(--darkmode) 0 0 0 5px;
-    }
+.post-full-content hr:after {
+    background: color(var(--darkmode) l(+8%));
+    box-shadow: var(--darkmode) 0 0 0 5px;
+}
 
-    .post-full-content figcaption {
-        color: rgba(255, 255, 255, 0.6);
-    }
+.post-full-content figcaption {
+    color: rgba(255, 255, 255, 0.6);
+}
 
-    .post-full-content table td:first-child {
-        background-image: linear-gradient(to right, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
-    }
+.post-full-content table td:first-child {
+    background-image: linear-gradient(to right, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
+}
 
-    .post-full-content table td:last-child {
-        background-image: linear-gradient(to left, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
-    }
+.post-full-content table td:last-child {
+    background-image: linear-gradient(to left, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
+}
 
-    .post-full-content table th {
-        color: rgba(255, 255, 255, 0.85);
-        background-color: color-mod(var(--darkmode) l(+8%));
-    }
+.post-full-content table th {
+    color: rgba(255, 255, 255, 0.85);
+    background-color: color-mod(var(--darkmode) l(+8%));
+}
 
-    .post-full-content table th,
-    .post-full-content table td {
-        border: color-mod(var(--darkmode) l(+8%)) 1px solid;
-    }
+.post-full-content table th,
+.post-full-content table td {
+    border: color-mod(var(--darkmode) l(+8%)) 1px solid;
+}
 
-    .post-full-content .kg-bookmark-container,
-    .post-full-content .kg-bookmark-container:hover {
-        color: rgba(255, 255, 255, 0.75);
-        box-shadow: 0 0 1px rgba(255,255,255,0.9);
-    }
+.post-full-content .kg-bookmark-container,
+.post-full-content .kg-bookmark-container:hover {
+    color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
+}
 
-    .kg-bookmark-title {
-        color: #fff;
-    }
+.kg-bookmark-title {
+    color: #fff;
+}
 
-    .kg-bookmark-description {
-        color: rgba(255, 255, 255, 0.75);
-    }
+.kg-bookmark-description {
+    color: rgba(255, 255, 255, 0.75);
+}
 
-    .kg-bookmark-metadata {
-        color: rgba(255, 255, 255, 0.75);
-    }
+.kg-bookmark-metadata {
+    color: rgba(255, 255, 255, 0.75);
+}
 
-    .site-archive-header .no-image {
-        color: rgba(255, 255, 255, 0.9);
-        background: var(--darkmode);
-    }
+.site-archive-header .no-image {
+    color: rgba(255, 255, 255, 0.9);
+    background: var(--darkmode);
+}
 
-    .site-archive-header .no-image .site-header-content {
-        border-bottom-color: color-mod(var(--darkmode) l(+15%));
-    }
+.site-archive-header .no-image .site-header-content {
+    border-bottom-color: color-mod(var(--darkmode) l(+15%));
+}
 
-    .site-header-content .author-profile-image {
-        box-shadow: 0 0 0 6px hsla(0,0%,100%,0.04);
-    }
+.site-header-content .author-profile-image {
+    box-shadow: 0 0 0 6px hsla(0, 0%, 100%, 0.04);
+}
 
-    .subscribe-form {
-        border: none;
-        background: linear-gradient(color-mod(var(--darkmode) l(-6%)), color-mod(var(--darkmode) l(-3%)));
-    }
+.subscribe-form {
+    border: none;
+    background: linear-gradient(color-mod(var(--darkmode) l(-6%)), color-mod(var(--darkmode) l(-3%)));
+}
 
-    .subscribe-form-title {
-        color: rgba(255, 255, 255, 0.9);
-    }
+.subscribe-form-title {
+    color: rgba(255, 255, 255, 0.9);
+}
 
-    .subscribe-form p {
-        color: rgba(255, 255, 255, 0.7);
-    }
+.subscribe-form p {
+    color: rgba(255, 255, 255, 0.7);
+}
 
-    .subscribe-email {
-        border-color: color-mod(var(--darkmode) l(+6%));
-        color: rgba(255, 255, 255, 0.9);
-        background: color-mod(var(--darkmode) l(+3%));
-    }
+.subscribe-email {
+    border-color: color-mod(var(--darkmode) l(+6%));
+    color: rgba(255, 255, 255, 0.9);
+    background: color-mod(var(--darkmode) l(+3%));
+}
 
-    .subscribe-email:focus {
-        border-color: color-mod(var(--darkmode) l(+25%));
-    }
+.subscribe-email:focus {
+    border-color: color-mod(var(--darkmode) l(+25%));
+}
 
-    .subscribe-form button {
-        opacity: 0.9;
-    }
+.subscribe-form button {
+    opacity: 0.9;
+}
 
-    .subscribe-form .invalid .message-error,
-    .subscribe-form .error .message-error {
-        color: color-mod(var(--red) l(+5%) s(-5%));
-    }
+.subscribe-form .invalid .message-error,
+.subscribe-form .error .message-error {
+    color: color-mod(var(--red) l(+5%) s(-5%));
+}
 
-    .subscribe-form .success .message-success {
-        color: color-mod(var(--green) l(+5%) s(-5%));
-    }
+.subscribe-form .success .message-success {
+    color: color-mod(var(--green) l(+5%) s(-5%));
+}
+
 /*}*/
