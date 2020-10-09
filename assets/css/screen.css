@@ -31,6 +31,9 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 @import "global.css";
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap&subset=cyrillic');
+
 body {
     background: #fff;
 }
@@ -74,7 +77,7 @@ body {
 /* Centered content container blocks */
 .inner {
     margin: 0 auto;
-    max-width: 1140px;
+    max-width: 1160px;
     width: 100%;
 }
 
@@ -283,7 +286,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color-mod(var(--darkgrey) l(-5%));
+    background: #ffffff;
 }
 
 .site-nav {
@@ -292,7 +295,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     height: 60px;
     font-size: 1.3rem;
 }
@@ -316,7 +320,6 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color-mod(var(--darkgrey) l(-5%) a(0)) 0%, color-mod(var(--darkgrey) l(-5%)) 100%);
 }
 
 .site-nav-left {
@@ -332,8 +335,12 @@ body {
     white-space: nowrap;
     font-size: 16px;
     justify-content: space-between;
-    font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
     -ms-overflow-scrolling: touch;
+}
+
+.nav-post-title-active .site-nav-left {
+    flex: 0 0 auto;
 }
 
 .site-nav-left .nav li:last-of-type {
@@ -368,6 +375,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .site-nav-logo img {
+    max-width: 180px;
     display: block;
     width: auto;
     height: 16px;
@@ -394,9 +402,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .nav li a {
     position: relative;
     display: block;
-    padding: 12px 14px 10px;
+    padding: 12px 15px 10px;
     color: var(--primary);
     transition: opacity 0.35s ease-in-out;
+}
+
+.nav li:nth-of-type(3) a {
+    color: var(--dark);
+    opacity: 0.7;
 }
 
 .nav li a:hover {
@@ -419,7 +432,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     visibility: hidden;
     position: absolute;
     top: 9px;
-    color: #fff;
     font-size: 1.7rem;
     font-weight: 400;
     text-transform: none;
@@ -499,7 +511,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .social-link-wb svg path {
-    stroke: #fff;
+    stroke: var(--primary);
 }
 
 .social-link-rss svg {
@@ -508,13 +520,17 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .subscribe-button {
     display: block;
-    margin: 0 0 0 10px;
-    padding: 4px 10px;
-    border: #fff 1px solid;
-    color: #fff;
-    line-height: 1em;
-    border-radius: 10px;
-    opacity: 0.8;
+    padding: 0px 30px;
+    height: 40px;
+    border: 2px solid #1faa20;
+    background-color: #1faa20;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
 }
 
 .subscribe-button:hover {
@@ -593,7 +609,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 40px;
     padding: 0 20px 40px;
     min-height: 220px;
-    border-bottom: 1px solid color-mod(var(--lightgrey) l(+12%));
     background-size: cover;
 }
 
@@ -662,7 +677,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-excerpt {
     max-width: 56em;
     color: var(--midgrey);
-    font-family: Georgia, serif;
+    font-family: Roboto, Arial, sans-serif;
 }
 
 .post-card-excerpt p {
@@ -764,7 +779,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-byline-content a {
-    color: color-mod(var(--darkgrey) l(+20%));
+    color: var(--dark);
     font-weight: 600;
 }
 
@@ -816,10 +831,6 @@ make sure this only happens on large viewports / desktop-ish devices.
         padding-bottom: 40px;
         min-height: 280px;
         border-top: 0;
-    }
-
-    .post-card-large:hover {
-        border-bottom-color: color-mod(var(--lightgrey) l(+10%));
     }
 
     .post-card-large:not(.no-image) .post-card-header {
@@ -949,13 +960,13 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-full-title {
     margin: 0 0 0.2em;
-    color: color-mod(var(--darkgrey) l(-5%));
+    color: var(--dark);
 }
 
 .post-full-custom-excerpt {
     margin: 20px 0 0;
     color: var(--midgrey);
-    font-family: Georgia, serif;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 2.3rem;
     line-height: 1.4em;
     font-weight: 300;
@@ -978,7 +989,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-image img {
-    max-width: 1140px;
+    max-width: 1160px;
     width: 100%;
     height: auto;
 }
@@ -988,7 +999,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     margin: 0 auto;
     padding: 0 170px 6vw;
     min-height: 230px;
-    font-family: Georgia, serif;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 2.0rem;
     line-height: 1.6em;
     background: #fff;
@@ -1093,11 +1104,11 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1140px;
+    max-width: 1160px;
     height: auto;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1160px) {
 
     .post-full-content img,
     .post-full-content video {
@@ -1326,7 +1337,7 @@ Usage (In Ghost editor):
     padding: 0.4em 1em 0.9em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia, serif;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -1757,7 +1768,7 @@ Usage (In Ghost editor):
 
 .read-next {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: color-mod(var(--darkgrey) l(-5%));
+    background: var(--dark);
 }
 
 .read-next-feed {
@@ -1796,7 +1807,7 @@ Usage (In Ghost editor):
 }
 
 .read-next .static-avatar {
-    border-color: #000;
+    border-color: var(--dark);
 }
 
 .read-next .post-card-byline-content {
@@ -1815,7 +1826,7 @@ Usage (In Ghost editor):
     overflow: hidden;
     margin: 0 25px 50px;
     padding: 25px;
-    background: linear-gradient(color-mod(var(--darkgrey) l(+2%)), color-mod(var(--darkgrey) l(-5%)));
+    background: var(--dark);
     border-radius: 3px;
 }
 
@@ -1980,7 +1991,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content .kg-width-wide .kg-image {
-    max-width: 1140px;
+    max-width: 1160px;
 }
 
 .post-full-content .kg-width-full .kg-image {
@@ -2009,7 +2020,7 @@ Usage (In Ghost editor):
     font-size: 75%;
     line-height: 1.5em;
     text-align: center;
-    max-width: 1140px;
+    max-width: 1160px;
 }
 
 .kg-width-full figcaption {
@@ -2028,7 +2039,7 @@ Usage (In Ghost editor):
 }
 
 
-@media (max-width: 1140px) {
+@media (max-width: 1160px) {
     .post-full-content .kg-width-full .kg-image {
         width: 100vw;
     }
@@ -2037,7 +2048,7 @@ Usage (In Ghost editor):
 .kg-gallery-container {
     display: flex;
     flex-direction: column;
-    max-width: 1140px;
+    max-width: 1160px;
     width: 100vw;
 }
 
@@ -2630,7 +2641,7 @@ Usage (In Ghost editor):
     margin: 0 auto 50px;
     max-width: 650px;
     color: #fff;
-    font-family: Georgia, serif;
+    font-family: Roboto, Arial, sans-serif;
     font-size: 2.4rem;
     line-height: 1.3em;
     font-weight: 300;
@@ -2715,7 +2726,7 @@ Usage (In Ghost editor):
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
-    background: color-mod(var(--darkgrey) l(-5%));
+    background: var(--dark);
 }
 
 .site-footer-content {
@@ -2770,218 +2781,3 @@ Usage (In Ghost editor):
         margin-left: 0;
     }
 }
-
-
-/* 12. Dark Mode
-/* ---------------------------------------------------------- */
-/*@media (prefers-color-scheme: dark) {*/
-body {
-    color: rgba(255, 255, 255, 0.75);
-    background: var(--darkmode);
-}
-
-.site-header-background:before {
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.post-feed {
-    background: var(--darkmode);
-}
-
-.post-card,
-.post-card:hover {
-    border-bottom-color: color-mod(var(--darkmode) l(+8%));
-}
-
-.author-profile-image {
-    background: var(--darkmode);
-}
-
-.post-card-byline-content a {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.post-card-byline-content a:hover {
-    color: #fff;
-}
-
-.post-card-image {
-    background: var(--darkmode);
-}
-
-.post-card-title {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.post-card-excerpt {
-    color: color-mod(var(--midgrey) l(+10%));
-}
-
-.author-avatar,
-.static-avatar {
-    border-color: color-mod(var(--darkgrey) l(+2%));
-}
-
-.site-main,
-.post-template .site-main,
-.page-template .site-main {
-    background: var(--darkmode);
-}
-
-.post-full-content {
-    background: var(--darkmode);
-}
-
-.post-full-title {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.post-full-custom-excerpt {
-    color: color-mod(var(--midgrey) l(+10%));
-}
-
-.post-full-image {
-    background-color: color-mod(var(--darkmode) l(+8%));
-}
-
-.post-full-byline {
-    border-top-color: color-mod(var(--darkmode) l(+15%));
-}
-
-.post-full-byline-meta h4 a {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.post-full-byline-meta h4 a:hover {
-    color: #fff;
-}
-
-.no-image .author-social-link a {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.post-full-content h1,
-.post-full-content h2,
-.post-full-content h3,
-.post-full-content h4,
-.post-full-content h6 {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.post-full-content a {
-    color: #fff;
-    box-shadow: inset 0 -1px 0 #fff;
-}
-
-.post-full-content strong {
-    color: #fff;
-}
-
-.post-full-content em {
-    color: #fff;
-}
-
-.post-full-content code {
-    color: #fff;
-    background: #000;
-}
-
-hr {
-    border-top-color: color-mod(var(--darkmode) l(+8%));
-}
-
-.post-full-content hr:after {
-    background: color(var(--darkmode) l(+8%));
-    box-shadow: var(--darkmode) 0 0 0 5px;
-}
-
-.post-full-content figcaption {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.post-full-content table td:first-child {
-    background-image: linear-gradient(to right, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
-}
-
-.post-full-content table td:last-child {
-    background-image: linear-gradient(to left, var(--darkmode) 50%, color-mod(var(--darkmode) a(0%)) 100%);
-}
-
-.post-full-content table th {
-    color: rgba(255, 255, 255, 0.85);
-    background-color: color-mod(var(--darkmode) l(+8%));
-}
-
-.post-full-content table th,
-.post-full-content table td {
-    border: color-mod(var(--darkmode) l(+8%)) 1px solid;
-}
-
-.post-full-content .kg-bookmark-container,
-.post-full-content .kg-bookmark-container:hover {
-    color: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
-}
-
-.kg-bookmark-title {
-    color: #fff;
-}
-
-.kg-bookmark-description {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.kg-bookmark-metadata {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.site-archive-header .no-image {
-    color: rgba(255, 255, 255, 0.9);
-    background: var(--darkmode);
-}
-
-.site-archive-header .no-image .site-header-content {
-    border-bottom-color: color-mod(var(--darkmode) l(+15%));
-}
-
-.site-header-content .author-profile-image {
-    box-shadow: 0 0 0 6px hsla(0, 0%, 100%, 0.04);
-}
-
-.subscribe-form {
-    border: none;
-    background: linear-gradient(color-mod(var(--darkmode) l(-6%)), color-mod(var(--darkmode) l(-3%)));
-}
-
-.subscribe-form-title {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.subscribe-form p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.subscribe-email {
-    border-color: color-mod(var(--darkmode) l(+6%));
-    color: rgba(255, 255, 255, 0.9);
-    background: color-mod(var(--darkmode) l(+3%));
-}
-
-.subscribe-email:focus {
-    border-color: color-mod(var(--darkmode) l(+25%));
-}
-
-.subscribe-form button {
-    opacity: 0.9;
-}
-
-.subscribe-form .invalid .message-error,
-.subscribe-form .error .message-error {
-    color: color-mod(var(--red) l(+5%) s(-5%));
-}
-
-.subscribe-form .success .message-success {
-    color: color-mod(var(--green) l(+5%) s(-5%));
-}
-
-/*}*/
