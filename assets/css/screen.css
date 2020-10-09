@@ -825,12 +825,17 @@ make sure this only happens on large viewports / desktop-ish devices.
  */
 
 @media (min-width: 795px) {
+    .post-card {
+        max-width: 33%;
+    }
+    
     .post-card-large {
         flex: 1 1 100%;
         flex-direction: row;
         padding-bottom: 40px;
         min-height: 280px;
         border-top: 0;
+        max-width: 100%;
     }
 
     .post-card-large:not(.no-image) .post-card-header {
