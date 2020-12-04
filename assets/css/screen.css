@@ -337,6 +337,12 @@ body {
     justify-content: space-between;
     font-family: 'IBM Plex Sans', Arial, sans-serif;
     -ms-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.site-nav-left::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-post-title-active .site-nav-left {
