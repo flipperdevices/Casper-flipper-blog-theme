@@ -88,17 +88,17 @@ into the {body} of the default.hbs template --}}
                 </div>
             </section>
 
-            {{!-- Email subscribe form at the bottom of the page --}}
-            {{#if @labs.members}}
-                {{> subscribe-form}}
-            {{/if}}
-
             <section class="post-full-comments">
                 <script defer
                     src="https://comments.flipperzero.one/js/commento.js">
                 </script>
                 <div id="commento"></div>
             </section>
+
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.members}}
+                {{> subscribe-form}}
+            {{/if}}
 
         </article>
 
