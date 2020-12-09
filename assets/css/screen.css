@@ -1769,8 +1769,21 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 .post-full-comments {
+	padding: 0 170px;
     margin: 0 auto;
     max-width: 840px;
+}
+
+@media (max-width: 1170px) {
+    .post-full-comments {
+        padding: 0 11vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .post-full-comments {
+        padding: 0 5vw;
+    }
 }
 
 
