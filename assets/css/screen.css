@@ -799,6 +799,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 0.6;
 }
 
+.post-card-byline-date .comments-link {
+    color: color-mod(var(--midgrey) l(+10%));
+    font-weight: 400;
+}
+
 .single-author-byline {
     display: flex;
     flex-direction: column;
