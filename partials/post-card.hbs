@@ -61,7 +61,7 @@
             </ul>
             <div class="post-card-byline-content">
                 <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
-                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> <a class="comments-link" href="{{url}}#comments"><span class="remark42__counter" data-url="{{url absolute="true"}}"></span> comments</a></span>
+                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> <a class="comments-link" href="{{url}}#comments">{{> "icons/comments"}}&nbsp;<span class="remark42__counter" data-url="{{url absolute="true"}}"></span>&nbsp;comments</a></span>
             </div>
         </footer>
 

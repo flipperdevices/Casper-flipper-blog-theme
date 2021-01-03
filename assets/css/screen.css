@@ -804,6 +804,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     font-weight: 400;
 }
 
+.post-card-byline-date .comments-link svg {
+    fill: color-mod(var(--midgrey) l(+10%));
+    height: 1.8rem;
+}
+
 .single-author-byline {
     display: flex;
     flex-direction: column;
