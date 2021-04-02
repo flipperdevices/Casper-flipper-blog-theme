@@ -2757,8 +2757,6 @@ Usage (In Ghost editor):
 
 .site-footer {
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: #fff;
     background: var(--dark);
 }
