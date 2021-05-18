@@ -654,7 +654,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .post-card-byline-date .comments-link {
-    color: color-mod(var(--color-midgrey) l(+10%));
+    color: color-mod(var(--color-midgrey) l(+10%)) !important;
     font-weight: 400;
 }
 
