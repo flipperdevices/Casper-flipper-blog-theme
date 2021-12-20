@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}" <html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{/match}}{{#match @custom.color_scheme "Auto"}} class="auto-color"{{/match}}></html>
 <head>
 
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
@@ -8,6 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        :root {
+            {{#if @custom.header_button_background}}
+            --button-bg-color: {{@custom.header_button_background}};
+            {{/if}}
+            --button-text-color: {{#match @custom.header_button_text_color "Light"}}#fff{{else}}var(--color-darkgrey){{/match}};
+        }
+    </style>
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -18,10 +27,10 @@
     {{ghost_head}}
 
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}">
 <div class="viewport">
 
-    <header id="gh-head" class="gh-head {{#if @site.cover_image}}has-cover{{/if}}">
+    <header id="gh-head" class="gh-head{{#match @custom.publication_cover_style "!=" "None"}} has-cover{{/match}}">
         <nav class="gh-head-inner inner gh-container">
 
             <div class="gh-head-brand">
@@ -43,18 +52,18 @@
             </div>
             <div class="gh-head-actions">
                 {{#unless @member}}
-                    <a class="gh-head-button" href="#/portal/signup">Subscribe to updates</a>
+                    <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe to updates</a>
                 {{else}}
-                    <a class="gh-head-button" href="#/portal/account">Account</a>
+                    <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
                 {{/unless}}
             </div>
         </nav>
     </header>
 
-    <main>
+    <div class="site-content">
         {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
-    </main>
+    </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
             <footer class="site-footer critical-hidden">
