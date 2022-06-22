@@ -66,249 +66,267 @@
     </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
-            <footer class="site-footer critical-hidden">
-
-            <style type="text/css">
-                .footer-sections {
-                    display: flex;
-                    justify-content: center;
-                    padding: 30px 0% 0;
-                    flex-flow: row wrap;
-                }
-
-                .footer-section {
-                    padding: 40px 40px;
-                }
-
-                .footer-section h4 {
-                    color: #ffffff;
-                    font-size: 21px;
-                    font-family: 'Roboto', Arial, sans-serif;
-                    line-height: 1.55;
-                    font-weight: 500;
-                    background-position: center center;
-                    border-color: transparent;
-                    border-style: solid;
-                    margin-bottom: 15px;
-                }
-
-                .footer-section a {
-                    color: #e88004;
-                    text-decoration: none;
-                    font-size: 16px;
-                    font-family: 'Roboto', Arial, sans-serif;
-                    line-height: 1.55;
-                    font-weight: 400;
-                    background-position: center center;
-                    border-color: transparent;
-                    border-style: solid;
-                    display: block;
-                }
-
-                .footer-social {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .footer-social-el {
-                    width: 45px;
-                    margin: 0 20px;
-                }
-
-                .footer-social-el.dis {
-                    width: 60px;
-                }
-
-                .footer-social-el a {
-                    display: block;
-                    width: 100%;
-                }
-
-                .disclaimer {
-                    display: flex;
-                    justify-content: center;
-                    padding: 30px 0 20px;
-                }
-
-                .disclaimer p {
-                    color: #ededed;
-                    font-size: 16px;
-                    font-family: 'Roboto', Arial, sans-serif;
-                    line-height: 1.55;
-                    font-weight: 400;
-                    background-position: center center;
-                    border-color: transparent;
-                    border-style: solid;
-                }
-
-                .background-flp {
-                    right: 0;
-                    position: absolute;
-                    bottom: 0px;
-                    width: 20%;
-                }
-
-                .footer-section-half {
-                    display: flex;
-                }
-
-                @media screen and (max-width: 900px) {
-                    .footer-section {
-                        padding: 20px 20px;
-                    }
-
-                    .footer-section h4 {
-                        font-size: 19px;
-                        white-space: nowrap;
-                    }
-
-                    .footer-section a,
-                    .disclaimer p {
-                        font-size: 14px;
-                    }
-
-                    .footer-social-el {
-                        width: 25px;
-                    }
-
-                    .footer-social-el.dis {
-                        width: 35px;
-                    }
-
-                    .background-flp {
-                        width: 25%;
-                    }
-                }
-
-                @media screen and (max-width: 650px) {
-                    .footer-section {
-                        padding: 20px 20px;
-                        width: 50%;
-                    }
-
-                    .footer-section h4 {
-                        font-size: 15px;
-                    }
-
-                    .footer-section a,
-                    .disclaimer p {
-                        font-size: 12px;
-                    }
-
-                    .footer-social-el {
-                        width: 20px;
-                    }
-
-                    .footer-social-el.dis {
-                        width: 25px;
-                    }
-
-                    .background-flp {
-                        width: 100px;
-                    }
-
-                    .disclaimer {
-                        justify-content: left;
-                        padding: 20px 20px 0px;
-                    }
-
-                    .footer-social {
-                        padding: 20px 0;
-                    }
-                }
-            </style>
-
-            <div class="footer-sections">
-                <div class="footer-section-half">
-                    <div class="footer-section">
-                        <h4>Community</h4>
-                        <div class="links">
-                            <a
-                                href="https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers">Kickstarter</a>
-                            <a href="https://habr.com/ru/company/flipperdevices/">Habr.com</a>
-                            <a href="https://flipperzero.one/discord">Discord</a>
-                            <a href="https://forum.flipperzero.one/">Forum</a>
-                            <a href="http://blog.flipperzero.one/">Blog</a>
-                        </div>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>For developers</h4>
-                        <div class="links">
-                            <a href="https://flipperzero.one/developers">Developer Program</a>
-                            <a href="https://github.com/flipperdevices">Github</a>
-                            <a href="https://flipperzero.one/design-guide">Design Guide</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-section-half">
-                    <div class="footer-section">
-                        <h4>Partners</h4>
-                        <div class="links">
-                            <a href="https://neuronspace.ru/">Neuron Hackerspace </a>
-                            <a href="https://designheroes.io/">Design Heroes</a>
-                            <a href="https://slozhno.media/">Slozhno.Media</a>
-                        </div>
-                    </div>
-
-                    <div class="footer-section">
-                        <h4>About</h4>
-                        <div class="links">
-                            <a href="https://flipperzero.one/contacts">Contacts</a>
-                            <a href="https://www.flipperdevices.com/">Company</a>
-                            <a href="https://www.flipperdevices.com/jobs">Careers</a>
-                            <a href="https://drive.google.com/drive/folders/1452h630Dq-Tk2xkS_Z8qTHZHylGFByd4">Press
-                                kit</a>
-                            <a href="https://flipperzero.one/privacy">Privacy Policy</a>
-                            <a href="https://flipperzero.one/faq">FAQ</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="footer-social">
-                <div class="footer-social-el dis">
-                    <a class="tn-atom" href="http://flipperzero.one/discord"><img class="tn-atom__img"
-                            src="https://static.tildacdn.com/tild3462-3138-4833-a330-343266316462/Discord-Logo-Color.png"
-                            imgfield="tn_img_1598903563540"></a>
-                </div>
-                <div class="footer-social-el">
-                    <a class="tn-atom" href="https://twitter.com/flipper_zero"><img class="tn-atom__img"
-                            src="https://static.tildacdn.com/tild3964-6436-4931-a631-643566316262/twitter.png"
-                            imgfield="tn_img_1584873111253"></a>
-                </div>
-                <div class="footer-social-el">
-                    <a class="tn-atom" href="https://youtube.com/flipperzero"><img
-                            class="tn-atom__img"
-                            src="https://static.tildacdn.com/tild3166-6364-4131-b030-623135373065/youtube.png"
-                            imgfield="tn_img_1584873111259"></a>
-                </div>
-                <div class="footer-social-el">
-                    <a class="tn-atom" href="https://www.facebook.com/flipperzero/"><img class="tn-atom__img"
-                            src="https://static.tildacdn.com/tild6538-6332-4538-b637-313836623832/facebook-770688_960_.png"
-                            imgfield="tn_img_1584873111221"></a>
-                </div>
-                <div class="footer-social-el">
-                    <a class="tn-atom" href="https://www.instagram.com/flipper_zero/"><img class="tn-atom__img"
-                            src="https://static.tildacdn.com/tild6635-6261-4165-a361-323765366265/instagram.png"
-                            imgfield="tn_img_1584873111231"></a>
+    <footer class="site-footer critical-hidden" role="contentinfo" data-section-id="footer" data-section-type="footer-section">
+        <style type="text/css">
+            .ab-collection-container > div:last-of-type {
+            margin-top: 100px;
+            background: #171717;
+            max-width: 100vw !important;
+            }
+        
+            .site-footer {
+            position: relative;
+            background: #171717;
+            }
+        
+            .site-footer img {
+            max-width: 100%;
+            height: auto;
+            }
+        
+            .footer-sections {
+            display: flex;
+            justify-content: center;
+            padding: 30px 0% 0;
+            flex-flow: row wrap;
+            }
+        
+            .footer-section {
+            padding: 40px 40px;
+            }
+        
+            .footer-section h4 {
+            color: #ffffff;
+            font-size: 21px;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.55;
+            font-weight: 500;
+            background-position: center center;
+            border-color: transparent;
+            border-style: solid;
+            margin-bottom: 15px;
+            }
+        
+            .footer-section a {
+            color: #e88004;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.55;
+            font-weight: 400;
+            background-position: center center;
+            border-color: transparent;
+            border-style: solid;
+            display: block;
+            }
+        
+            .footer-social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        
+            .footer-social-el {
+            width: 45px;
+            margin: 0 20px;
+            }
+        
+            .footer-social-el.dis {
+            width: 60px;
+            }
+        
+            .footer-social-el a {
+            display: block;
+            width: 100%;
+            }
+        
+            .disclaimer {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            }
+        
+            .disclaimer p {
+            color: #ededed;
+            font-size: 16px;
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.55;
+            font-weight: 400;
+            background-position: center center;
+            border-color: transparent;
+            border-style: solid;
+            }
+        
+            .background-flp {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 20%;
+            }
+        
+            .footer-section-half {
+            display: flex;
+            }
+        
+            @media screen and (max-width: 900px) {
+            .footer-section {
+                padding: 20px 20px;
+            }
+        
+            .footer-section h4 {
+                font-size: 19px;
+                white-space: nowrap;
+            }
+        
+            .footer-section a,
+            .disclaimer p {
+                font-size: 14px;
+            }
+        
+            .footer-social-el {
+                width: 25px;
+            }
+        
+            .footer-social-el.dis {
+                width: 35px;
+            }
+        
+            .background-flp {
+                width: 25%;
+            }
+            }
+        
+            @media screen and (max-width: 650px) {
+            .footer-section {
+                padding: 20px 20px;
+                width: 50%;
+            }
+        
+            .footer-section h4 {
+                font-size: 15px;
+            }
+        
+            .footer-section a,
+            .disclaimer p {
+                font-size: 12px;
+            }
+        
+            .footer-social-el {
+                width: 20px;
+            }
+        
+            .footer-social-el.dis {
+                width: 25px;
+            }
+        
+            .background-flp {
+                width: 100px;
+            }
+        
+            .disclaimer {
+                justify-content: left;
+                padding: 20px;
+            }
+        
+            .footer-social {
+                padding: 20px 0;
+            }
+            }
+        </style>
+        
+        <div class="footer-sections">
+            <div class="footer-section-half">
+            <div class="footer-section">
+                <h4>Community</h4>
+                <div class="links">
+                <a
+                    href="https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers">Kickstarter</a>
+                <a href="https://habr.com/ru/company/flipperdevices/">Habr.com</a>
+                <a href="https://flipperzero.one/discord">Discord</a>
+                <a href="https://forum.flipperzero.one/">Forum</a>
+                <a href="http://blog.flipperzero.one/">Blog</a>
                 </div>
             </div>
 
-            <div class="disclaimer">
-                <p>Copyright &copy; {{date format="YYYY"}} Flipper Devices Inc.</p>
+            <div class="footer-section">
+                <h4>For developers</h4>
+                <div class="links">
+                <a href="https://flipperzero.one/developers">Developer Program</a>
+                <a href="https://github.com/flipperdevices">Github</a>
+                <a href="https://flipperzero.one/design-guide">Design Guide</a>
+                </div>
+            </div>
             </div>
 
-            <div class="background-flp">
-                <img class="tn-atom__img t-img loaded"
-                    data-original="https://static.tildacdn.com/tild3361-3465-4835-a463-663630313732/noroot.png"
-                    imgfield="tn_img_1600372125130"
-                    src="https://thumb.tildacdn.com/tild3361-3465-4835-a463-663630313732/-/resize/540x/-/format/webp/noroot.png">
+            <div class="footer-section-half">
+            <div class="footer-section">
+                <h4>Partners</h4>
+                <div class="links">
+                <a href="https://neuronspace.ru/">Neuron Hackerspace </a>
+                <a href="https://designheroes.io/">Design Heroes</a>
+                <a href="https://slozhno.media/">Slozhno.Media</a>
+                </div>
             </div>
 
+            <div class="footer-section">
+                <h4>About</h4>
+                <div class="links">
+                <a href="https://flipperzero.one/contacts">Contacts</a>
+                <a href="https://www.flipperdevices.com/">Company</a>
+                <a href="https://www.flipperdevices.com/jobs">Careers</a>
+                <a href="https://drive.google.com/drive/folders/1452h630Dq-Tk2xkS_Z8qTHZHylGFByd4">Press
+                    kit</a>
+                <a href="https://flipperzero.one/privacy">Privacy Policy</a>
+                <a href="https://flipperzero.one/faq">FAQ</a>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="footer-social">
+            <div class="footer-social-el dis">
+            <a class="tn-atom" href="http://flipperzero.one/discord"><img class="tn-atom__img"
+                src="https://static.tildacdn.com/tild3462-3138-4833-a330-343266316462/Discord-Logo-Color.png"
+                imgfield="tn_img_1598903563540"></a>
+            </div>
+            <div class="footer-social-el">
+            <a class="tn-atom" href="https://twitter.com/flipper_zero">
+                <img class="tn-atom__img" src="https://static.tildacdn.com/tild3964-6436-4931-a631-643566316262/twitter.png"
+                imgfield="tn_img_1584873111253">
+            </a>
+            </div>
+            <div class="footer-social-el">
+            <a class="tn-atom" href="https://youtube.com/flipperzero">
+                <img class="tn-atom__img" src="https://static.tildacdn.com/tild3166-6364-4131-b030-623135373065/youtube.png"
+                imgfield="tn_img_1584873111259">
+            </a>
+            </div>
+            <div class="footer-social-el">
+            <a class="tn-atom" href="https://www.facebook.com/flipperzero/">
+                <img class="tn-atom__img"
+                src="https://static.tildacdn.com/tild6538-6332-4538-b637-313836623832/facebook-770688_960_.png"
+                imgfield="tn_img_1584873111221">
+            </a>
+            </div>
+            <div class="footer-social-el">
+            <a class="tn-atom" href="https://www.instagram.com/flipper_zero/">
+                <img class="tn-atom__img" src="https://static.tildacdn.com/tild6635-6261-4165-a361-323765366265/instagram.png"
+                imgfield="tn_img_1584873111231">
+            </a>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p>Copyright © 2022 Flipper Devices Inc.</p>
+        </div>
+
+        <div class="background-flp">
+            <img class="tn-atom__img t-img loaded"
+            data-original="https://static.tildacdn.com/tild3361-3465-4835-a463-663630313732/noroot.png"
+            imgfield="tn_img_1600372125130"
+            src="https://thumb.tildacdn.com/tild3361-3465-4835-a463-663630313732/-/resize/540x/-/format/webp/noroot.png" />
+        </div>
         </footer>
     </div>
 
