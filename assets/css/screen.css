@@ -2059,3 +2059,9 @@ file to add some of your own styles. Well, you've come to
 the right place. Onward!
 
  */
+
+ .is-imageBackgrounded {
+    all: unset;
+    margin: 0;
+    display: contents;
+ }
