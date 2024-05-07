@@ -130,7 +130,7 @@
           justify-content: center;
           align-items: center;
         }
-    
+
         .footer-social > .group {
           display: flex;
         }
@@ -176,11 +176,11 @@
         .footer-section-half {
           display: flex;
         }
-    
+
         @media (max-width: 1024px) {
           .footer-social {
             flex-wrap: wrap;
-    
+
           }
         }
       
@@ -198,7 +198,7 @@
           .disclaimer p {
             font-size: 14px;
           }
-    
+
           .footer-social {
             margin-bottom: 15px;
           }
@@ -253,7 +253,7 @@
           }
         }
       </style>
-    
+
       <div class="footer-sections">
         <div class="footer-section-half">
           <div class="footer-section">
@@ -263,21 +263,21 @@
                 href="https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers">Kickstarter</a>
               <a href="https://habr.com/ru/company/flipperdevices/">Habr.com</a>
               <a href="https://flipperzero.one/discord">Discord</a>
-              <a href="https://forum.flipper.net/">Forum</a>
-              <a href="https://blog.flipper.net/">Blog</a>
+              <a href="https://forum.flipperzero.one/">Forum</a>
+              <a href="http://blog.flipperzero.one/">Blog</a>
             </div>
           </div>
-    
+
           <div class="footer-section">
             <h4>For developers</h4>
             <div class="links">
-              <a href="https://docs.flipper.net/">Documentation</a>
+              <a href="https://docs.flipperzero.one/">Documentation</a>
               <a href="https://github.com/flipperdevices">GitHub</a>
               <a href="https://flipperzero.one/design-guide">Design Guide</a>
             </div>
           </div>
         </div>
-    
+
         <div class="footer-section-half">
           <div class="footer-section">
             <h4>Distributors</h4>
@@ -288,12 +288,11 @@
               <a href="https://forms.gle/M7EYXKRAfVRPF2uu9">Become a Partner</a>
             </div>
           </div>
-    
+
           <div class="footer-section">
             <h4>About</h4>
             <div class="links">
               <a href="https://flipperzero.one/contacts">Contacts</a>
-              <a href="https://flipperdevices.com/jobs">Jobs</a>
               <a href="https://flipperzero.one/compliance">Compliance</a>
               <a href="https://www.flipperdevices.com/">Company</a>
               <a href="https://flipperzero.one/abuse-report">Abuse Report</a>
@@ -301,9 +300,9 @@
             </div>
           </div>
         </div>
-    
+
       </div>
-    
+
       <div class="footer-social">
         <div class="footer-social-el dis">
           <a class="tn-atom" href="http://flipperzero.one/discord"><img class="tn-atom__img"
@@ -350,16 +349,21 @@
           </div>
         </div>
       </div>
-    
+
       <div class="disclaimer">
-        <p>Copyright © 2024 Flipper Devices Inc.</p>
+        <p>Copyright © <span class="year">2024</span> Flipper Devices Inc.</p>
       </div>
-    
+
       <div class="background-flp">
         <img class="tn-atom__img t-img loaded"
           src="https://cdn.flipperzero.one/footer_orange_dolphin.svg" />
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("footer span.year").innerText = new Date().getFullYear() || 2024
+      })
+    </script>
     </div>
 
 {{!-- /.viewport --}}
