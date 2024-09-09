@@ -55,13 +55,7 @@
             <div class="gh-head-menu">
                 {{navigation}}
             </div>
-            <div class="gh-head-actions">
-                {{#unless @member}}
-                    <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe to updates</a>
-                {{else}}
-                    <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
-                {{/unless}}
-            </div>
+            {{> "subscription-form"}}
         </nav>
     </header>
 
@@ -78,28 +72,28 @@
           background: #171717;
           max-width: 100vw !important;
         }
-      
+
         .site-footer {
           position: relative;
           background: #171717;
         }
-      
+
         .site-footer img {
           max-width: 100%;
           height: auto;
         }
-      
+
         .footer-sections {
           display: flex;
           justify-content: center;
           padding: 30px 0% 0;
           flex-flow: row wrap;
         }
-      
+
         .footer-section {
           padding: 40px 40px;
         }
-      
+
         .footer-section h4 {
           color: #ffffff;
           font-size: 21px;
@@ -111,7 +105,7 @@
           border-style: solid;
           margin-bottom: 15px;
         }
-      
+
         .footer-section a {
           color: #e88004;
           text-decoration: none;
@@ -124,7 +118,7 @@
           border-style: solid;
           display: block;
         }
-      
+
         .footer-social {
           display: flex;
           justify-content: center;
@@ -134,27 +128,27 @@
         .footer-social > .group {
           display: flex;
         }
-      
+
         .footer-social-el {
           width: 45px;
           margin: 15px 25px;
         }
-      
+
         .footer-social-el.dis {
           width: 60px;
         }
-      
+
         .footer-social-el a {
           display: block;
           width: 100%;
         }
-      
+
         .disclaimer {
           display: flex;
           justify-content: center;
           padding: 55px 30px 30px 30px;
         }
-      
+
         .disclaimer p {
           color: #ededed;
           font-size: 16px;
@@ -165,14 +159,14 @@
           border-color: transparent;
           border-style: solid;
         }
-      
+
         .background-flp {
           position: absolute;
           left: 0;
           bottom: 0;
           width: 20%;
         }
-      
+
         .footer-section-half {
           display: flex;
         }
@@ -183,17 +177,17 @@
 
           }
         }
-      
+
         @media screen and (max-width: 900px) {
           .footer-section {
             padding: 20px 20px;
           }
-      
+
           .footer-section h4 {
             font-size: 19px;
             white-space: nowrap;
           }
-      
+
           .footer-section a,
           .disclaimer p {
             font-size: 14px;
@@ -202,52 +196,52 @@
           .footer-social {
             margin-bottom: 15px;
           }
-      
+
           .footer-social-el {
             width: 25px;
           }
-      
+
           .footer-social-el.dis {
             width: 35px;
           }
-      
+
           .background-flp {
             width: 150px;
           }
         }
-      
+
         @media screen and (max-width: 650px) {
           .footer-section {
             padding: 20px 20px;
             width: 50%;
           }
-      
+
           .footer-section h4 {
             font-size: 15px;
           }
-      
+
           .footer-section a,
           .disclaimer p {
             font-size: 12px;
           }
-      
+
           .footer-social-el {
             width: 20px;
           }
-      
+
           .footer-social-el.dis {
             width: 25px;
           }
-      
+
           .background-flp {
             width: 100px;
           }
-      
+
           .disclaimer {
             justify-content: right;
             padding: 20px;
           }
-      
+
           .footer-social {
             padding: 20px 0;
           }

@@ -1,0 +1,228 @@
+{{!-- This is a partial file used for the subscription form via Brevo. --}}
+
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<style>
+#sib-container input:-ms-input-placeholder {
+    text-align: left;
+    color: #aeaeae;
+}
+
+#sib-container input::placeholder {
+    text-align: left;
+    color: #aeaeae;
+}
+
+#sib-form-container {
+    color: black
+}
+
+#sib-container {
+    padding: 0;
+    background: transparent;
+}
+
+.sib-input {
+    margin-right: 10px;
+}
+
+.sib-form {
+    padding: 0;
+}
+
+.sib-form .form__entry {
+    height: 100%;
+}
+
+.sib-form .entry__error {
+    font-size: 16px;
+    text-align: center;
+    color: #f02525;
+}
+
+#sib-form {
+    display: flex;
+}
+
+.sib-form-message-panel {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1rem;
+}
+
+#success-message.sib-form-message-panel{
+    color: #1faa20;
+}
+
+#error-message.sib-form-message-panel{
+    color: #f02525;
+}
+
+.sib-form .input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: inherit;
+    background: transparent;
+    outline: none;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    letter-spacing: 0.2px;
+    transition: border-color 0.25s ease-in-out;
+
+    height: 100% !important;
+}
+
+.sib-form .input:focus {
+    border-color: #aeaeae;
+}
+
+.sib-form .input.error {
+    border-color: #f02525;
+}
+
+.sib-form .input::placeholder {
+    color: #aeaeae;
+}
+
+.portal-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0.2px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #ffffff;
+    background: #e88004;
+    min-width: 80px;
+    height: 44px;
+    padding: 0 1.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .25s ease;
+    box-shadow: none;
+    user-select: none;
+    outline: none;
+    pointer-events: auto;
+}
+
+.portal-btn:hover {
+    opacity: 0.92
+}
+
+.portal-btn:disabled {
+    opacity: 0.5 !important;
+    cursor: auto;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+</style>
+
+<div class="sib-form gh-head-actions">
+    <div id="sib-form-container">
+        <div id="sib-container">
+            <form id="sib-form" method="POST" action="https://183c2432.sibforms.com/serve/MUIFAEVesO3uXARx-JD2UOgBj2EZhwIUveYqzSkzgLHOxdDJY3qmgZ35-cnlPU9Bvu5lqb5YdCSxiurkULBU0PKPvuy5q1xEDTI7S92nb84ZoiK85wbyjS03PikqwR-JBTHCcFM-11v06jEoidzC88BTRoOYDsmT2zrWPL4bKPFOqDruPqoCdAEXGeBHyz_t96d3QGFGAJbHu1Yg" data-type="subscription">
+                <div class="sib-input">
+                    <div class="form__entry">
+                        <input class="input portal-input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="jamie@example.com" data-required="true" required />
+
+                        <label class="entry__error entry__error--primary"></label>
+
+                        <div id="success-message" class="sib-form-message-panel">
+                            <span class="sib-form-message-panel__inner-text">You&#039;re subscribed</span>
+                        </div>
+                        <div id="error-message" class="sib-form-message-panel">
+                            <span class="sib-form-message-panel__inner-text">Oops! Please try again</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-recaptcha-v3" data-sitekey="6Ld2fzgqAAAAALj-sPd5AOnPIcgbPFxcMs41AeXW" style="display: none"></div>
+                <button class="portal-btn" form="sib-form" type="submit">
+                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                        <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                    </svg>
+                    Subscribe
+                </button>
+
+                <input type="text" name="email_address_check" value="" class="input--hidden">
+                <input type="hidden" name="locale" value="en">
+                <input id="geo" type="hidden" name="GEO">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function () {
+    setTimeout(() => {
+        fetch('https://geo.tildacdn.com/geo/country/')
+            .then(res => res.arrayBuffer())
+            .then(buf => new TextDecoder().decode(buf))
+            .then(geo => {
+                const geoInput = document.querySelector('#geo');
+                geoInput.setAttribute('value', geo);
+                console.log('added geo input');
+            })
+            .then(() => {
+                const utmParams = []
+                document.location.search.slice(1).split('&').forEach(e => {
+                    if (e.startsWith('utm')) {
+                        utmParams.push({
+                            name: e.split('=')[0],
+                            value: e.split('=')[1]
+                        })
+                    }
+                })
+
+                const geoInput = document.querySelector('#geo');
+                const utmInput = document.createElement('input')
+                for (const utm of utmParams) {
+                    utmInput.name = utm.name.toUpperCase()
+                    utmInput.setAttribute('type', 'hidden')
+                    utmInput.setAttribute('value', utm.value)
+                    geoInput.after(utmInput)
+                }
+            })
+    }, 1000)
+});
+</script>
+
+<script>
+window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+window.LOCALE = 'en';
+window.EMAIL_INVALID_MESSAGE = "Invalid email address";
+window.SMS_INVALID_MESSAGE = "Invalid phone number";
+
+window.REQUIRED_ERROR_MESSAGE = "Enter your email address";
+
+window.GENERIC_INVALID_MESSAGE = "Invalid email address";
+
+
+window.translation = {
+    common: {
+        selectedList: '{quantity} list selected',
+        selectedLists: '{quantity} lists selected'
+    }
+};
+
+var AUTOHIDE = Boolean(0);
+</script>
+
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld2fzgqAAAAALj-sPd5AOnPIcgbPFxcMs41AeXW&hl=en" async defer></script>
