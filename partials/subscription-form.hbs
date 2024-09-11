@@ -37,7 +37,7 @@
 
 .sib-form {
     padding: 0;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .sib-form .form__entry {
@@ -52,6 +52,13 @@
 
 #sib-form {
     display: flex;
+    height: 32px;
+}
+
+@media (max-width: 900px) {
+    #sib-form {
+        height: 44px;
+    }
 }
 
 .sib-form-message-panel {
@@ -120,7 +127,7 @@
     color: #ffffff;
     background: #e88004;
     min-width: 80px;
-    height: 44px;
+    height: 100%;
     padding: 0 1.8rem;
     border-radius: 6px;
     cursor: pointer;
