@@ -161,8 +161,7 @@ production stylesheet in assets/built/screen.css
     grid-gap: 2.5vmin;
     grid-template-columns: 1fr auto auto;
     grid-auto-flow: row dense;
-    height: 60px;
-    align-items: center;
+    align-items: end;
 }
 
 
