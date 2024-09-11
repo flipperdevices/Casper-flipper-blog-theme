@@ -17,8 +17,18 @@
 }
 
 #sib-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     padding: 0;
     background: transparent;
+}
+
+@media (max-width: 900px) {
+    #sib-container {
+        align-items: flex-start;
+    }
 }
 
 .sib-input {
@@ -27,6 +37,7 @@
 
 .sib-form {
     padding: 0;
+    margin-bottom: 4px;
 }
 
 .sib-form .form__entry {
@@ -132,11 +143,17 @@
 .grecaptcha-badge {
     visibility: hidden;
 }
+
+.form-description {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
 </style>
 
 <div class="sib-form gh-head-actions">
     <div id="sib-form-container">
         <div id="sib-container">
+            <p class="form-description">Subscribe to notifications of new posts:</p>
             <form id="sib-form" method="POST" action="https://183c2432.sibforms.com/serve/MUIFAEVesO3uXARx-JD2UOgBj2EZhwIUveYqzSkzgLHOxdDJY3qmgZ35-cnlPU9Bvu5lqb5YdCSxiurkULBU0PKPvuy5q1xEDTI7S92nb84ZoiK85wbyjS03PikqwR-JBTHCcFM-11v06jEoidzC88BTRoOYDsmT2zrWPL4bKPFOqDruPqoCdAEXGeBHyz_t96d3QGFGAJbHu1Yg" data-type="subscription">
                 <div class="sib-input">
                     <div class="form__entry">
