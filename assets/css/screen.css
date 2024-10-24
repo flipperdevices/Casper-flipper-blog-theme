@@ -1444,7 +1444,7 @@ iframe.instagram-media+script+ :not([id]) {
 
 .read-more-wrap {
     width: 100%;
-    padding: 4vmin;
+    padding: 10vmin 4vmin;
     margin: 40px auto -40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background: var(--color-darkgrey);
