@@ -4,8 +4,7 @@
     "demo": "https://demo.ghost.io",
     "version": "4.7.2",
     "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
+        "ghost": ">=4.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -182,21 +181,6 @@
                     "Small"
                 ],
                 "default": "Wide",
-                "group": "post"
-            },
-            "email_signup_for_logged_out_visitors": {
-                "type": "select",
-                "options": [
-                    "Footer",
-                    "Bottom of post",
-                    "None"
-                ],
-                "default": "Footer",
-                "group": "post"
-            },
-            "email_signup_text": {
-                "type": "text",
-                "default": "Sign up for more like this.",
                 "group": "post"
             },
             "show_recent_posts": {
