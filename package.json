@@ -4,8 +4,7 @@
     "demo": "https://demo.ghost.io",
     "version": "4.7.2",
     "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
+        "ghost": ">=4.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -47,21 +46,48 @@
     "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
     "devDependencies": {
         "@tryghost/release-utils": "0.6.12",
-        "autoprefixer": "10.2.5",
+        "autoprefixer": "10.4.20",
         "beeper": "2.1.0",
-        "cssnano": "4.1.10",
-        "gscan": "4.36.2",
+        "cssnano": "5.1.15",
+        "gscan": "4.45.0",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",
-        "gulp-postcss": "9.0.0",
+        "gulp-postcss": "9.0.1",
         "gulp-uglify": "3.0.2",
         "gulp-zip": "5.1.0",
-        "inquirer": "8.0.0",
-        "postcss": "8.2.10",
+        "inquirer": "8.2.6",
+        "postcss": "8.4.49",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "3.0.0",
-        "pump": "3.0.0"
+        "pump": "3.0.2"
+    },
+    "resolutions": {
+        "ansi-regex": "^5.0.1",
+        "minimatch": "^3.0.5",
+        "minimist": "^1.2.8",
+        "path-parse": "^1.0.7",
+        "brace-expansion": "^1.1.12",
+        "lodash": "^4.17.21",
+        "semver": "^7.6.3",
+        "json-schema": "^0.4.0",
+        "qs": "^6.11.2",
+        "cross-spawn": "^7.0.6",
+        "browserslist": "^4.24.3",
+        "moment": "^2.30.1",
+        "tough-cookie": "^4.1.4",
+        "form-data": "^4.0.1",
+        "tmp": "^0.2.4",
+        "validator": "^13.15.20",
+        "multer": "^2.0.2",
+        "postcss-color-mod-function/postcss": "^8.4.31",
+        "cssnano/postcss": "^8.4.31",
+        "cssnano/**/postcss": "^8.4.31",
+        "postcss-easy-import/postcss": "^8.4.31",
+        "postcss-easy-import/**/postcss": "^8.4.31",
+        "nth-check": "^2.1.1",
+        "braces": "^3.0.3",
+        "micromatch": "^4.0.8"
     },
     "browserslist": [
         "defaults"
@@ -155,21 +181,6 @@
                     "Small"
                 ],
                 "default": "Wide",
-                "group": "post"
-            },
-            "email_signup_for_logged_out_visitors": {
-                "type": "select",
-                "options": [
-                    "Footer",
-                    "Bottom of post",
-                    "None"
-                ],
-                "default": "Footer",
-                "group": "post"
-            },
-            "email_signup_text": {
-                "type": "text",
-                "default": "Sign up for more like this.",
                 "group": "post"
             },
             "show_recent_posts": {
