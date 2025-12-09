@@ -65,304 +65,413 @@
     </div>
 
     {{!-- The global footer at the very bottom of the screen --}}
-    <footer class="site-footer critical-hidden" role="contentinfo" data-section-id="footer" data-section-type="footer-section">
-      <style type="text/css">
-        .ab-collection-container > div:last-of-type {
-          margin-top: 100px;
-          background: #171717;
-          max-width: 100vw !important;
-        }
+    <footer class="custom-footer" role="contentinfo">
+    <div class="custom-footer__inner">
+        <div class="custom-footer__top">
+        <div class="custom-footer__columns">
+            <div class="custom-footer__column">
+            <ul class="custom-footer__links">
+                <li class="custom-footer__item">
+                <a href="/collections" class="custom-footer__link">Products</a>
+                </li>
 
-        .site-footer {
-          position: relative;
-          background: #171717;
-        }
+                <li class="custom-footer__item">
+                <a href="/pages/downloads" class="custom-footer__link">Downloads</a>
+                </li>
 
-        .site-footer img {
-          max-width: 100%;
-          height: auto;
-        }
-
-        .footer-sections {
-          display: flex;
-          justify-content: center;
-          padding: 30px 0% 0;
-          flex-flow: row wrap;
-        }
-
-        .footer-section {
-          padding: 40px 40px;
-        }
-
-        .footer-section h4 {
-          color: #ffffff;
-          font-size: 21px;
-          font-family: 'Roboto', Arial, sans-serif;
-          line-height: 1.55;
-          font-weight: 500;
-          background-position: center center;
-          border-color: transparent;
-          border-style: solid;
-          margin-bottom: 15px;
-        }
-
-        .footer-section a {
-          color: #e88004;
-          text-decoration: none;
-          font-size: 16px;
-          font-family: 'Roboto', Arial, sans-serif;
-          line-height: 1.55;
-          font-weight: 400;
-          background-position: center center;
-          border-color: transparent;
-          border-style: solid;
-          display: block;
-        }
-
-        .footer-social {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .footer-social > .group {
-          display: flex;
-        }
-
-        .footer-social-el {
-          width: 45px;
-          margin: 15px 25px;
-        }
-
-        .footer-social-el.dis {
-          width: 60px;
-        }
-
-        .footer-social-el a {
-          display: block;
-          width: 100%;
-        }
-
-        .disclaimer {
-          display: flex;
-          justify-content: center;
-          padding: 55px 30px 30px 30px;
-        }
-
-        .disclaimer p {
-          color: #ededed;
-          font-size: 16px;
-          font-family: 'Roboto', Arial, sans-serif;
-          line-height: 1.55;
-          font-weight: 400;
-          background-position: center center;
-          border-color: transparent;
-          border-style: solid;
-        }
-
-        .background-flp {
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 20%;
-        }
-
-        .footer-section-half {
-          display: flex;
-        }
-
-        @media (max-width: 1024px) {
-          .footer-social {
-            flex-wrap: wrap;
-
-          }
-        }
-
-        @media screen and (max-width: 900px) {
-          .footer-section {
-            padding: 20px 20px;
-          }
-
-          .footer-section h4 {
-            font-size: 19px;
-            white-space: nowrap;
-          }
-
-          .footer-section a,
-          .disclaimer p {
-            font-size: 14px;
-          }
-
-          .footer-social {
-            margin-bottom: 15px;
-          }
-
-          .footer-social-el {
-            width: 25px;
-          }
-
-          .footer-social-el.dis {
-            width: 35px;
-          }
-
-          .background-flp {
-            width: 150px;
-          }
-        }
-
-        @media screen and (max-width: 650px) {
-          .footer-section {
-            padding: 20px 20px;
-            width: 50%;
-          }
-
-          .footer-section h4 {
-            font-size: 15px;
-          }
-
-          .footer-section a,
-          .disclaimer p {
-            font-size: 12px;
-          }
-
-          .footer-social-el {
-            width: 20px;
-          }
-
-          .footer-social-el.dis {
-            width: 25px;
-          }
-
-          .background-flp {
-            width: 100px;
-          }
-
-          .disclaimer {
-            justify-content: right;
-            padding: 20px;
-          }
-
-          .footer-social {
-            padding: 20px 0;
-          }
-        }
-      </style>
-
-      <div class="footer-sections">
-        <div class="footer-section-half">
-          <div class="footer-section">
-            <h4>Community</h4>
-            <div class="links">
-              <a
-                href="https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers">Kickstarter</a>
-              <a href="https://habr.com/ru/company/flipperdevices/">Habr.com</a>
-              <a href="https://flipperzero.one/discord">Discord</a>
-              <a href="https://forum.flipperzero.one/">Forum</a>
-              <a href="http://blog.flipperzero.one/">Blog</a>
+                <li class="custom-footer__item">
+                <a href="https://github.com/flipperdevices" class="custom-footer__link">GitHub</a>
+                </li>
+            </ul>
             </div>
-          </div>
 
-          <div class="footer-section">
-            <h4>Resources</h4>
-            <div class="links">
-              <a href="https://flipperzero.one/downloads">Downloads</a>
-              <a href="https://docs.flipperzero.one">Documentation</a>
-              <a href="https://developer.flipper.net/flipperzero/doxygen/index.html">For Developers</a>
-              <a href="https://github.com/flipperdevices">GitHub</a>
-              <a href="https://lab.flipper.net">Lab</a>
-              <a href="https://flipperzero.one/design-guide">Design Guide</a>
+            <div class="custom-footer__column">
+            <ul class="custom-footer__links">
+                <li class="custom-footer__item">
+                <a href="https://support.flipper.net" class="custom-footer__link">Support</a>
+                </li>
+
+                <li class="custom-footer__item">
+                <a href="/pages/community" class="custom-footer__link">Community</a>
+                </li>
+
+                <li class="custom-footer__item">
+                <a href="https://docs.flipper.net" class="custom-footer__link">Documentation</a>
+                </li>
+            </ul>
             </div>
-          </div>
-        </div>
 
-        <div class="footer-section-half">
-          <div class="footer-section">
-            <h4>Distributors</h4>
-            <div class="links">
-              <a href="https://lab401.com/">Lab401</a>
-              <a href="https://flipp.dev/joom-catalog">Joom</a>
-              <a href="https://flipperzero.one/how-to-buy">How to buy</a>
-              <a href="https://forms.gle/M7EYXKRAfVRPF2uu9">Become a Partner</a>
+            <div class="custom-footer__column">
+            <ul class="custom-footer__links">
+                <li class="custom-footer__item">
+                <a href="https://blog.flipper.net" class="custom-footer__link">Blog</a>
+                </li>
+
+                <li class="custom-footer__item">
+                <a href="https://forms.gle/M7EYXKRAfVRPF2uu9" class="custom-footer__link">Resellers</a>
+                </li>
+
+                <li class="custom-footer__item">
+                <a href="https://hackspace.flipper.net" class="custom-footer__link">Hackspace</a>
+                </li>
+            </ul>
             </div>
-          </div>
 
-          <div class="footer-section">
-            <h4>About</h4>
-            <div class="links">
-              <a href="https://support.flipper.net/">Support</a>
-              <a href="https://flipperzero.one/contacts">Contacts</a>
-              <a href="https://flipperzero.one/compliance">Compliance</a>
-              <a href="https://www.flipperdevices.com/">Company</a>
-              <a href="https://flipperzero.one/abuse-report">Abuse Report</a>
-              <a href="https://flipperzero.one/privacy">Privacy Policy</a>
+            <div class="custom-footer__column">
+            <ul class="custom-footer__links">
+                <li class="custom-footer__item">
+                <a href="https://flipperdevices.com/jobs/" class="custom-footer__link">Jobs</a>
+                </li>
+
+                <li class="custom-footer__item">
+                <a href="https://flipperdevices.com" class="custom-footer__link">Company</a>
+                </li>
+
+                <li class="custom-footer__item">
+                <a href="/pages/contacts" class="custom-footer__link">Contacts</a>
+                </li>
+            </ul>
             </div>
-          </div>
         </div>
 
-      </div>
+        <div class="custom-footer__socials">
+            <div class="social-icons__wrapper footer-utilities__icons">
+            <div class="social-icons__icon-wrapper">
+                <a href="https://www.youtube.com/flipperzero" target="_blank" rel="noopener noreferrer"
+                aria-label="Youtube">
+                <span class="social-icons__icon-label">Youtube</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                    d="M18.16 5.87c.34 1.309.34 4.08.34 4.08s0 2.771-.34 4.08a2.125 2.125 0 0 1-1.53 1.53c-1.309.34-6.63.34-6.63.34s-5.321 0-6.63-.34a2.125 2.125 0 0 1-1.53-1.53c-.34-1.309-.34-4.08-.34-4.08s0-2.771.34-4.08a2.173 2.173 0 0 1 1.53-1.53C4.679 4 10 4 10 4s5.321 0 6.63.34a2.173 2.173 0 0 1 1.53 1.53ZM8.3 12.5l4.42-2.55L8.3 7.4v5.1Z">
+                    </path>
+                </svg>
+                </a>
+            </div>
 
-      <div class="footer-social">
-        <div class="footer-social-el dis">
-          <a class="tn-atom" href="http://flipperzero.one/discord"><img class="tn-atom__img"
-              src="https://static.tildacdn.com/tild3462-3138-4833-a330-343266316462/Discord-Logo-Color.png"
-              imgfield="tn_img_1598903563540"></a>
-        </div>
-        <div class="footer-social-el">
-          <a class="tn-atom" href="https://x.com/flipper_net">
-            <img class="tn-atom__img" src="https://static.tildacdn.com/tild3964-6436-4931-a631-643566316262/twitter.png"
-              imgfield="tn_img_1584873111253">
-          </a>
-        </div>
-        <div class="footer-social-el">
-          <a class="tn-atom" href="https://youtube.com/flipperzero">
-            <img class="tn-atom__img" src="https://static.tildacdn.com/tild3166-6364-4131-b030-623135373065/youtube.png"
-              imgfield="tn_img_1584873111259">
-          </a>
-        </div>
-        <div class="footer-social-el">
-          <a class="tn-atom" href="https://www.facebook.com/flipperzero/">
-            <img class="tn-atom__img"
-              src="https://static.tildacdn.com/tild6538-6332-4538-b637-313836623832/facebook-770688_960_.png"
-              imgfield="tn_img_1584873111221">
-          </a>
-        </div>
-        <div class="group">
-          <div class="footer-social-el">
-            <a class="tn-atom" href="https://www.instagram.com/flipper_zero/">
-              <img class="tn-atom__img" src="https://static.tildacdn.com/tild6635-6261-4165-a361-323765366265/instagram.png"
-                imgfield="tn_img_1584873111231">
-            </a>
-          </div>
-          <div class="footer-social-el">
-            <a class="tn-atom" href="https://www.tiktok.com/@flipperzero">
-              <img class="tn-atom__img" src="https://cdn.flipperzero.one/tiktok-app-icon.svg"
-                imgfield="tn_img_1584873111231">
-            </a>
-          </div>
-          <div class="footer-social-el">
-            <a class="tn-atom" href="https://www.reddit.com/r/flipperzero/">
-              <img class="tn-atom__img" src="https://cdn.flipperzero.one/reddit-logo.svg"
-                imgfield="tn_img_1584873111231">
-            </a>
-          </div>
-        </div>
-      </div>
+            <div class="social-icons__icon-wrapper">
+                <a href="https://www.instagram.com/flipper_zero/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <span class="social-icons__icon-label">Instagram</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                    d="M13.23 3.492c-.84-.037-1.096-.046-3.23-.046-2.144 0-2.39.01-3.238.055-.776.027-1.195.164-1.487.273a2.43 2.43 0 0 0-.912.593 2.486 2.486 0 0 0-.602.922c-.11.282-.238.702-.274 1.486-.046.84-.046 1.095-.046 3.23 0 2.134.01 2.39.046 3.229.004.51.097 1.016.274 1.495.145.365.319.639.602.913.282.282.538.456.92.602.474.176.974.268 1.479.273.848.046 1.103.046 3.238.046 2.134 0 2.39-.01 3.23-.046.784-.036 1.203-.164 1.486-.273.374-.146.648-.329.921-.602.283-.283.447-.548.602-.922.177-.476.27-.979.274-1.486.037-.84.046-1.095.046-3.23 0-2.134-.01-2.39-.055-3.229-.027-.784-.164-1.204-.274-1.495a2.43 2.43 0 0 0-.593-.913 2.604 2.604 0 0 0-.92-.602c-.284-.11-.703-.237-1.488-.273ZM6.697 2.05c.857-.036 1.131-.045 3.302-.045 1.1-.014 2.202.001 3.302.045.664.014 1.321.14 1.943.374a3.968 3.968 0 0 1 1.414.922c.41.397.728.88.93 1.414.23.622.354 1.279.365 1.942C18 7.56 18 7.824 18 10.005c0 2.17-.01 2.444-.046 3.292-.036.858-.173 1.442-.374 1.943-.2.53-.474.976-.92 1.423a3.896 3.896 0 0 1-1.415.922c-.51.191-1.095.337-1.943.374-.857.036-1.122.045-3.302.045-2.171 0-2.445-.009-3.302-.055-.849-.027-1.432-.164-1.943-.364a4.152 4.152 0 0 1-1.414-.922 4.128 4.128 0 0 1-.93-1.423c-.183-.51-.329-1.085-.365-1.943C2.009 12.45 2 12.167 2 10.004c0-2.161 0-2.435.055-3.302.027-.848.164-1.432.365-1.942a4.44 4.44 0 0 1 .92-1.414 4.18 4.18 0 0 1 1.415-.93c.51-.183 1.094-.33 1.943-.366Zm.427 4.806a4.105 4.105 0 1 1 5.805 5.805 4.105 4.105 0 0 1-5.805-5.805Zm1.882 5.371a2.668 2.668 0 1 0 2.042-4.93 2.668 2.668 0 0 0-2.042 4.93Zm5.922-5.942a.958.958 0 1 1-1.355-1.355.958.958 0 0 1 1.355 1.355Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                </a>
+            </div>
 
-      <div class="disclaimer">
-        <p>Copyright © <span class="year">2024</span> Flipper Devices Inc.</p>
-      </div>
+            <div class="social-icons__icon-wrapper">
+                <a href="https://www.facebook.com/flipperzero/" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook">
+                <span class="social-icons__icon-label">Facebook</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                    d="M18 10.049C18 5.603 14.419 2 10 2c-4.419 0-8 3.603-8 8.049C2 14.067 4.925 17.396 8.75 18v-5.624H6.719v-2.328h2.03V8.275c0-2.017 1.195-3.132 3.023-3.132.874 0 1.79.158 1.79.158v1.98h-1.009c-.994 0-1.303.621-1.303 1.258v1.51h2.219l-.355 2.326H11.25V18c3.825-.604 6.75-3.933 6.75-7.951Z">
+                    </path>
+                </svg>
+                </a>
+            </div>
 
-      <div class="background-flp">
-        <img class="tn-atom__img t-img loaded"
-          src="https://cdn.flipperzero.one/footer_orange_dolphin.svg" />
-      </div>
-    </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector("footer span.year").innerText = new Date().getFullYear() || 2024
-      })
-    </script>
+            <div class="social-icons__icon-wrapper">
+                <a href="https://twitter.com/flipper_net" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <span class="social-icons__icon-label">Twitter</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M 7.7352 17.9146 c 6.6407 0 10.274 -5.3207 10.274 -9.9352 c 0 -0.1507 0 -0.3014 -0.011 -0.451 A 7.216 7.216 90 0 0 19.8 5.72 c -0.66 0.2816 -1.3585 0.4675 -2.0735 0.55 a 3.5277 3.5277 90 0 0 1.5873 -1.9327 c -0.7095 0.407 -1.485 0.693 -2.2935 0.847 a 3.6542 3.6542 90 0 0 -2.0482 -1.0538 a 3.7224 3.7224 90 0 0 -2.2902 0.3674 a 3.5453 3.5453 90 0 0 -1.5862 1.639 a 3.388 3.388 90 0 0 -0.2288 2.233 a 10.527 10.527 90 0 1 -4.1217 -1.0593 a 10.1959 10.1959 90 0 1 -3.3198 -2.5894 a 3.3946 3.3946 90 0 0 -0.396 2.5454 c 0.2079 0.8657 0.748 1.6225 1.5136 2.1164 a 3.6784 3.6784 90 0 1 -1.639 -0.4378 v 0.044 c 0 0.8074 0.2893 1.5884 0.8173 2.211 a 3.63 3.63 90 0 0 2.079 1.2122 c -0.5313 0.1408 -1.089 0.1606 -1.6302 0.0605 a 3.509 3.509 90 0 0 1.2848 1.7347 a 3.696 3.696 90 0 0 2.09 0.6897 A 7.4052 7.4052 90 0 1 2.2 16.346 a 10.4797 10.4797 90 0 0 5.5352 1.5653"
+                    fill="currentColor"></path>
+                </svg>
+                </a>
+            </div>
+
+            <div class="social-icons__icon-wrapper">
+                <a href="https://www.reddit.com/r/flipperzero/" target="_blank" rel="noopener noreferrer"
+                aria-label="Reddit">
+                <span class="social-icons__icon-label">Reddit</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                    d="M16.024 7.512c-.569 0-1.093.192-1.511.514-1.14-.705-2.577-1.148-4.15-1.207v-.007c0-1.054.783-1.929 1.8-2.073a1.772 1.772 0 1 0-.011-.766 2.86 2.86 0 0 0-2.55 2.84v.01c-1.558.065-2.98.508-4.109 1.208a2.481 2.481 0 1 0-2.57 4.21c.083 2.881 3.222 5.198 7.083 5.198 3.86 0 7.004-2.32 7.082-5.202a2.482 2.482 0 0 0-1.064-4.723v-.002Z">
+                    </path>
+                </svg>
+                </a>
+            </div>
+
+            <div class="social-icons__icon-wrapper">
+                <a href="https://discord.gg/flipper" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                <span class="social-icons__icon-label">Discord</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                    d="M12.534 3.178a10.55 10.55 0 0 0-.478.965 13.91 13.91 0 0 0-4.12 0 9.65 9.65 0 0 0-.478-.965 15 15 0 0 0-3.715 1.145C1.395 7.8.76 11.19 1.076 14.532a14.93 14.93 0 0 0 4.555 2.287c.37-.496.696-1.023.976-1.573a9.866 9.866 0 0 1-1.536-.732c.13-.093.255-.19.377-.284a10.696 10.696 0 0 0 9.107 0c.122.101.248.198.377.284a9.766 9.766 0 0 1-1.54.736c.28.55.607 1.077.976 1.572a14.923 14.923 0 0 0 4.556-2.283c.373-3.877-.64-7.237-2.675-10.213a14.77 14.77 0 0 0-3.711-1.141l-.004-.007Zm-5.525 9.297c-.886 0-1.622-.804-1.622-1.798 0-.995.707-1.802 1.619-1.802s1.637.81 1.622 1.802c-.014.99-.714 1.798-1.619 1.798Zm5.98 0c-.89 0-1.618-.804-1.618-1.798 0-.995.707-1.802 1.619-1.802s1.633.81 1.619 1.802c-.015.99-.715 1.798-1.62 1.798Z">
+                    </path>
+                </svg>
+                </a>
+            </div>
+
+            <div class="social-icons__icon-wrapper">
+                <a href="https://www.tiktok.com/@flipperzero" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
+                <span class="social-icons__icon-label">Tiktok</span>
+                <svg class="social-icons__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                    d="M10.511 1.705h2.74s-.157 3.51 3.795 3.768v2.711s-2.114.129-3.796-1.158l.028 5.606A5.073 5.073 0 1 1 8.213 7.56h.708v2.785a2.298 2.298 0 1 0 1.618 2.205L10.51 1.705Z">
+                    </path>
+                </svg>
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="custom-footer__bottom">
+        <div class="custom-footer__brand-and-copyright">
+            <div class="custom-footer__brand">
+            <img src="https://cdn.flipper.net/FOOTER_flipper_logo_gray.svg" alt="" width="180" height="21">
+            </div>
+
+            <div class="custom-footer__copyright">
+            Copyright © <span id="footer-copyright-year">2025</span> Flipper Devices Inc.
+            </div>
+        </div>
+
+        <nav class="custom-footer__bottom-nav" aria-label="Footer bottom">
+            <ul class="custom-footer__bottom-links">
+            <li>
+                <a href="/policies/shipping-policy" class="custom-footer__bottom-link">Shipping</a>
+            </li>
+
+            <li>
+                <a href="/pages/b2b-and-tax-exemption-policy" class="custom-footer__bottom-link">VAT Exemption</a>
+            </li>
+
+            <li>
+                <a href="/policies/refund-policy" class="custom-footer__bottom-link">Returns</a>
+            </li>
+
+            <li>
+                <a href="/pages/warranty-policy" class="custom-footer__bottom-link">Warranty</a>
+            </li>
+
+            <li>
+                <a href="/policies/privacy-policy" class="custom-footer__bottom-link">Privacy</a>
+            </li>
+
+            <li>
+                <a href="/pages/abuse-report" class="custom-footer__bottom-link">Abuse Report</a>
+            </li>
+
+            <li>
+                <a href="/pages/compliance" class="custom-footer__bottom-link">Compliance</a>
+            </li>
+
+            <li>
+                <a href="/policies/terms-of-service" class="custom-footer__bottom-link">Terms of Service</a>
+            </li>
+            </ul>
+        </nav>
+        </div>
     </div>
+
+    <style>
+        .custom-footer {
+        background: #000;
+        color: #d0d0d0;
+        padding: 40px;
+        }
+
+        .custom-footer__inner {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        }
+
+        .custom-footer__top {
+        display: flex;
+        gap: 48px;
+        justify-content: space-between;
+        align-items: flex-start;
+        }
+
+        .custom-footer__columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 120px;
+        }
+
+        .custom-footer__heading {
+        color: #9a9a9a;
+        font-size: 16px;
+        margin-bottom: 12px;
+        }
+
+        .custom-footer__links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .custom-footer__item {
+        margin: 8px 0;
+        }
+
+        .custom-footer__link {
+        text-decoration: none;
+        color: #A4A4A4;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: normal;
+        }
+
+        .custom-footer__social-list {
+        display: flex;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        }
+
+        .custom-footer__socials .social-icons__wrapper {
+        display: flex;
+        gap: 21px;
+        }
+
+        .custom-footer__socials .social-icons__icon-wrapper:has(.social-icons__icon path) {
+        width: 32px;
+        height: 32px;
+        }
+
+        .custom-footer__socials .social-icons__icon {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        color: #A4A4A4;
+        }
+
+        .custom-footer__bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+        color: #A4A4A4;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+        }
+
+        .custom-footer__brand-and-copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        }
+
+        .custom-footer__brand img {
+        width: 180px;
+        }
+
+        .custom-footer__bottom-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 45px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        }
+
+        .custom-footer__bottom-link {
+        color: #9a9a9a;
+        text-decoration: none;
+        }
+
+        .social-icons__icon {
+        fill: currentColor;
+        }
+        .social-icons__icon-label {
+        display: none;
+        }
+
+        @media (max-width: 870px) {
+        .custom-footer__top {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .custom-footer__brand-and-copyright {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .custom-footer__bottom {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 46px;
+        }
+
+        .custom-footer__brand-and-copyright {
+            flex-direction: column;
+        }
+
+        .custom-footer__bottom-links {
+            gap: 20px 24px;
+            justify-content: start;
+        }
+        }
+
+        @media (max-width: 750px) {
+        .custom-footer {
+            padding: 20px 16px;
+        }
+
+        .custom-footer__columns {
+            gap: 30px 60px;
+        }
+        }
+
+        @media (max-width: 500px) {
+        .custom-footer__inner {
+            gap: 40px;
+        }
+
+        .custom-footer__columns {
+            width: 100%;
+            justify-content: space-between;
+            gap: 30px 24px;
+        }
+
+        .custom-footer__column {
+            width: 128px;
+        }
+
+        .custom-footer__socials {
+            width: 100%;
+        }
+
+        .custom-footer__socials .social-icons__wrapper {
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        .custom-footer__socials .social-icons__icon-wrapper:has(.social-icons__icon path),
+        .custom-footer__socials .social-icons__icon {
+            width: 31px;
+            height: 31px;
+        }
+        }
+    </style>
+    </footer>
+
+    <script>
+    document.getElementById('footer-copyright-year').textContent = new Date().getFullYear();
+    </script>
+</div>
 
 {{!-- /.viewport --}}
 
