@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     {{!-- Preload critical resources to reduce render-blocking --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
     <link rel="preload" as="script" href="{{asset "built/casper.js"}}" />
@@ -380,6 +380,10 @@
         padding: 0;
         margin: 0;
         list-style: none;
+        }
+
+        .custom-footer__bottom-links li {
+            margin-top: .5em;
         }
 
         .custom-footer__bottom-link {
