@@ -80,7 +80,7 @@ which templates loop over to generate a list of posts. --}}
                 {{/foreach}}
             </ul>
             <div class="article-byline-meta">
-                <h4 class="author-name">{{#has author="count:>0"}}Multiple authors{{else}}{{authors}}{{/has}}</h4>
+                <h4 class="author-name">{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</h4>
                 <div class="byline-meta-content">
                     <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
                     {{!-- {{#if reading_time}}
