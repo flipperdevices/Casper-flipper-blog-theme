@@ -3342,7 +3342,9 @@ html.dark-mode .footer-cta-title {
 
 .post-card-title {
     margin: 0 0 .4em;
+    font-size: 2.4rem;
     font-weight: 700;
+    line-height: 1.15;
 }
 
 .post-card-excerpt {
