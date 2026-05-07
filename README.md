@@ -1,10 +1,12 @@
 # Casper
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+A classic theme for [Ghost](http://github.com/tryghost/ghost/), originally the default theme. These days, our default theme is [Source](http://github.com/tryghost/source/)
+
+This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
 
 &nbsp;
 
-![screenshot-desktop](https://user-images.githubusercontent.com/353959/66987533-40eae100-f0c1-11e9-822e-cbaf38fb8e3f.png)
+![screenshot-desktop](https://user-images.githubusercontent.com/1418797/183329195-8e8f2ee5-a473-4694-a813-a2575491209e.png)
 
 &nbsp;
 
@@ -63,7 +65,10 @@ Casper uses inline SVG icons, included via Handlebars partials. You can find all
 
 You can add your own SVG icons in the same manner.
 
+# Translations
+
+Please see [@TryGhost/Themes/theme-translations/README.md](https://github.com/TryGhost/Themes/blob/main/packages/theme-translations/README.md) for how to build, edit, or contribute translations.
 
 # Copyright & License
 
-Copyright (c) 2013-2021 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2026 Ghost Foundation - Released under the [MIT license](LICENSE).

@@ -1,57 +1,80 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
+<main id="site-main" class="site-main outer">
+<div class="inner posts">
 
-<section class="outer">
-    <div class="inner posts">
+    <header class="author-profile">
+        {{#author}}
+        {{!-- Everything inside the #author tags pulls data from the author --}}
 
-        <header class="author-profile">
-            {{#author}}
-            {{!-- Everything inside the #author tags pulls data from the author --}}
+        <div class="author-profile-content">
 
-            <div class="author-profile-content">
+            {{#if profile_image}}
+                <img class="author-profile-pic" src="{{profile_image}}" alt="{{name}}" loading="eager" />
+            {{else}}
+                <a href="{{url}}" class="author-profile-pic">{{> "icons/avatar"}}</a>
+            {{/if}}
 
-                {{#if profile_image}}
-                <img class="author-profile-pic" src="{{profile_image}}" alt="{{name}}" />
+            <h1>{{name}}</h1>
+            <p>
+                {{#if bio}}
+                    {{bio}}
                 {{else}}
-                <span class="author-profile-pic">{{> "icons/avatar"}}</span>
+                    {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} published
                 {{/if}}
+            </p>
 
-                <h1>{{name}}</h1>
-                <p>
-                    {{#if bio}}
-                        {{bio}}
-                    {{else}}
-                        {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}} published
-                    {{/if}}
-                </p>
+            {{#if location}}
+                <div class="author-profile-location">&#128205; {{location}}</div>
+            {{/if}}
+            {{#if website}}
+                <a class="author-profile-website author-profile-social-link" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
+            {{/if}}
 
-                <div class="author-profile-meta">
-                    {{#if location}}
-                    <div class="author-profile-location">📍 {{location}}</div>
-                    {{/if}}
-                    {{#if website}}
-                    <span><a class="author-profile-social-link" href="{{website}}" target="_blank" rel="noopener">{{website}}</a></span>
-                    {{/if}}
-                    {{#if twitter}}
-                    <span><a class="author-profile-social-link" href="{{twitter_url}}" target="_blank" rel="noopener">{{twitter_url}}</a></span>
-                    {{/if}}
-                    {{#if facebook}}
-                    <span><a class="author-profile-social-link" href="{{facebook_url}}" target="_blank" rel="noopener">{{facebook_url}}</a></span>
-                    {{/if}}
-                </div>
-
+            <div class="author-profile-meta">
+                {{#if twitter}}
+                    <a class="author-profile-social-link" href="{{social_url type="twitter"}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                {{/if}}
+                {{#if facebook}}
+                    <a class="author-profile-social-link" href="{{social_url type="facebook"}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                {{/if}}
+                {{#if linkedin}}
+                    <a class="author-profile-social-link" href="{{social_url type="linkedin"}}" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
+                {{/if}}
+                {{#if bluesky}}
+                    <a class="author-profile-social-link" href="{{social_url type="bluesky"}}" target="_blank" rel="noopener">{{> "icons/bluesky"}}</a>
+                {{/if}}
+                {{#if threads}}
+                    <a class="author-profile-social-link" href="{{social_url type="threads"}}" target="_blank" rel="noopener">{{> "icons/threads"}}</a>
+                {{/if}}
+                {{#if mastodon}}
+                    <a class="author-profile-social-link" href="{{social_url type="mastodon"}}" target="_blank" rel="noopener">{{> "icons/mastodon"}}</a>
+                {{/if}}
+                {{#if tiktok}}
+                    <a class="author-profile-social-link" href="{{social_url type="tiktok"}}" target="_blank" rel="noopener">{{> "icons/tiktok"}}</a>
+                {{/if}}
+                {{#if youtube}}
+                    <a class="author-profile-social-link" href="{{social_url type="youtube"}}" target="_blank" rel="noopener">{{> "icons/youtube"}}</a>
+                {{/if}}
+                {{#if instagram}}
+                    <a class="author-profile-social-link" href="{{social_url type="instagram"}}" target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
+                {{/if}}
             </div>
-
-            {{/author}}
-        </header>
-
-        <div class="post-feed">
-            {{#foreach posts}}
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-            {{/foreach}}
         </div>
 
+        {{/author}}
+    </header>
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+        {{/foreach}}
+
     </div>
-</section>
+
+    {{pagination}}
+
+</div>
+</main>
