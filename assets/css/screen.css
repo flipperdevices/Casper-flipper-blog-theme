@@ -3596,6 +3596,16 @@ figcaption {
     font-weight: 600;
 }
 
+.gh-button-share {
+    display: none;
+}
+
+@media (min-width: 901px) {
+    .gh-button-share {
+        display: inline-flex;
+    }
+}
+
 /*
 
 Hey! You reached the end.
