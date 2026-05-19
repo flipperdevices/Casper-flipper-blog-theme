@@ -1065,7 +1065,10 @@ production stylesheet in assets/built/screen.css
     font-family: var(--gh-font-body, var(--font-sans));
 }
 
-.post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(.no-image) .post-card-excerpt {
+.post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(
+        .no-image
+    )
+    .post-card-excerpt {
     line-clamp: 2;
     -webkit-line-clamp: 2;
 }
@@ -1431,7 +1434,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin: 2em 0 0;
+    margin: 1em 0 0;
 }
 
 /* Add a small margin between a heading and anything after it */
@@ -1637,10 +1640,10 @@ make sure they look good, and are given a bit of extra spacing. */
 /* Add extra margin before/after any cards,
 except for when immediately preceeded by a heading */
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: 6vmin;
+    margin-top: 3vmin;
 }
 .gh-content .kg-card + :not(.kg-card) {
-    margin-top: 6vmin;
+    margin-top: 3vmin;
 }
 
 /* This keeps small embeds centered */
@@ -3285,11 +3288,11 @@ html.dark-mode .footer-cta-title {
 }
 
 .post-card-primary-tag {
-    margin: 0 0 .2em;
+    margin: 0 0 0.2em;
     color: var(--color-flipper);
     font-size: 1.2rem;
     font-weight: 500;
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
 }
 
@@ -3297,11 +3300,11 @@ html.dark-mode .footer-cta-title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 0 .5rem;
+    margin: 0 0 0.5rem;
     color: var(--color-flipper);
     font-size: 1.3rem;
     line-height: 1.4em;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -3319,7 +3322,7 @@ html.dark-mode .footer-cta-title {
     height: 36px;
     margin: 0 -3px;
     border: none;
-    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .2);
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.2);
 }
 
 .post-card-meta .article-byline-meta .author-name {
@@ -3341,7 +3344,7 @@ html.dark-mode .footer-cta-title {
 }
 
 .post-card-title {
-    margin: 0 0 .4em;
+    margin: 0 0 0.4em;
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.15;
@@ -3356,7 +3359,10 @@ html.dark-mode .footer-cta-title {
     line-height: 1.6em;
 }
 
-.post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(.no-image) .post-card-excerpt {
+.post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(
+        .no-image
+    )
+    .post-card-excerpt {
     line-clamp: 3;
     -webkit-line-clamp: 3;
 }
@@ -3442,7 +3448,9 @@ html.dark-mode .footer-cta-title {
     .gh-head-open #gh-head .gh-head-actions {
         opacity: 1;
         transform: translateY(0);
-        transition: transform .2s, opacity .2s;
+        transition:
+            transform 0.2s,
+            opacity 0.2s;
         transition-delay: 0.18s;
     }
 }
@@ -3472,7 +3480,7 @@ html.dark-mode .footer-cta-title {
 .article-title {
     font-size: clamp(2.8rem, 5vw, 4.8rem);
     font-weight: 700;
-    margin: 0 0 .5em;
+    margin: 0 0 0.5em;
     line-height: 1.15;
 }
 
@@ -3498,13 +3506,13 @@ html.dark-mode .footer-cta-title {
 }
 
 .author-profile h1 {
-    margin: 0 0 .3em;
+    margin: 0 0 0.3em;
     font-size: 2rem;
 }
 
 .author-profile p {
     margin: 0 0 1.5em;
-    color: var(--color-blue-gray)
+    color: var(--color-blue-gray);
 }
 
 .author-profile-location {
@@ -3564,7 +3572,7 @@ html.dark-mode .footer-cta-title {
     grid-template-columns: 1fr 1fr;
 }
 
-:is(.tag-template,.author-template) .post-feed {
+:is(.tag-template, .author-template) .post-feed {
     margin-top: 0;
 }
 
