@@ -20,7 +20,8 @@
 
     {{!-- Code injection for <head> is stored in the theme instead of Ghost Admin
          to avoid the ghost_head vulnerability. Edit: partials/code-injection/head.hbs --}}
-    {{> "code-injection/head"}}
+    {{!-- {{> "code-injection/head"}} --}}
+    {{ghost_head}}
 
     {{!-- GDPR Cookie Banner --}}
     <script type="text/javascript" charset="UTF-8" src="//geo.cookie-script.com/s/221577e1a230b6280dbf9ef981aa49af?country=gb&region=eu"></script>
