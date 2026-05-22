@@ -1,0 +1,45 @@
+
+<script>
+        // Listen to all click events on the document
+    document.addEventListener('click', function (event) {
+
+        // If the clicked element does not have and is not contained by an element with the .click-me class, ignore it
+        if (!event.target.closest('.gh-head-button') && !event.target.closest('.footer-cta-button')) return;
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'button',
+            eventAction: 'subscribe',
+            eventLabel: 'email'
+        });
+        // Otherwise, do something...
+        if (event.target.closest('a[href*="#/portal"]')) {
+            setTimeout(() => {
+                const iframe = document.querySelector('iframe[title=portal-popup]')
+                const input = iframe.contentWindow.document.body.querySelector('input#input-email')
+                if (input) {
+                    fetch('https://geo.tildacdn.com/geo/country/')
+                        .then(res => res.arrayBuffer())
+                        .then(buf => new TextDecoder().decode(buf))
+                        .then(geo => {
+                            const regionInput = document.createElement('input')
+                            regionInput.name = 'geo'
+                            regionInput.setAttribute('type', 'hidden')
+                            regionInput.setAttribute('value', geo)
+                            input.after(regionInput)
+                        })
+                }
+            }, 300)
+        }
+
+    });
+var remark_config = {
+    host: "https://comments.flipp.dev",
+    site_id: 'flipperblog',
+    components: ['embed', 'counter'],
+    max_shown_comments: 20,
+    locale: 'en',
+    show_email_subscription: false
+};
+
+!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);
+</script>

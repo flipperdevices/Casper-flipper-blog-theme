@@ -1,0 +1,145 @@
+<!-- cookiescript -->
+<script type="text/javascript" charset="UTF-8" src="//geo.cookie-script.com/s/221577e1a230b6280dbf9ef981aa49af.js?country=gb&region=eu"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM78S6JK0K"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GM78S6JK0K');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSDXPTW');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSDXPTW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Flipper button icons -->
+<script type="text/javascript" src="https://cdn.flipper.net/findAndReplaceDOMText.js"></script>
+<script>
+    function replaceIcons () {
+        const post = document.querySelector('.article.post')
+        const feed = document.querySelector('.post-feed')
+        const articleBody = feed || post
+        const icons = [
+            {
+                name: 'back',
+                value: '<svg style="display:inline;fill:currentColor;stroke:currentColor;stroke-width:0.55px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"> <path d="M22,12C22,6.514 17.486,2 12,2C6.514,2 2,6.514 2,12C2,17.486 6.514,22 12,22C17.486,22 22,17.486 22,12M20,12C20,16.389 16.389,20 12,20C7.611,20 4,16.389 4,12C4,7.611 7.611,4 12,4C16.389,4 20,7.611 20,12"/> <path d="M7.154,9.781L9.62,8L9.62,9.096L14.004,9.096C15.874,9.096 17.154,10.969 17.154,12.52C17.154,14.333 15.959,15.945 14.278,15.945L9.757,15.945L9.757,14.712L14.141,14.712C15.224,14.712 15.785,13.409 15.785,12.657C15.785,11.906 15.425,10.466 14.141,10.466L9.62,10.466L9.62,11.425L7.154,9.781Z" style="stroke-width:0.55px;"/></svg>'
+            },
+            {
+                name: 'down',
+                value: '<svg style="display:inline;fill:currentColor;stroke:currentColor;stroke-width:0.55px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M7,10L12,15L17,10H7Z" /></svg>'
+            },
+            {
+                name: 'left',
+                value: '<svg style="display:inline;fill:currentColor;stroke:currentColor;stroke-width:0.55px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12M14,7L9,12L14,17V7Z" /></svg>'
+            },
+            {
+                name: 'ok',
+                value: '<svg style="display:inline;fill:currentColor;stroke:currentColor;stroke-width:0.55px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M22,12C22,6.514 17.486,2 12,2C6.514,2 2,6.514 2,12C2,17.486 6.514,22 12,22C17.486,22 22,17.486 22,12M20,12C20,16.389 16.389,20 12,20C7.611,20 4,16.389 4,12C4,7.611 7.611,4 12,4C16.389,4 20,7.611 20,12"/> <path d="M16,12C16,9.806 14.194,8 12,8C9.806,8 8,9.806 8,12C8,14.194 9.806,16 12,16C14.194,16 16,14.194 16,12"/></svg>'
+            },
+            {
+                name: 'right',
+                value: '<svg style="display:inline;fill:currentColor;stroke:currentColor;stroke-width:0.55px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12M4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12M10,17L15,12L10,7V17Z" /></svg>'
+            },
+            {
+                name: 'up',
+                value: '<svg style="display:inline;fill:currentColor;stroke:currentColor;stroke-width:0.55px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M17,14L12,9L7,14H17Z" /></svg>'
+            }
+        ]
+        icons.forEach(icon => {
+            findAndReplaceDOMText(articleBody, {
+                find: ':' + icon.name + ':',
+                replace: () => {
+                    const span = document.createElement("span");
+                    span.innerHTML = icon.value
+                    return span;
+                },
+                preset: 'prose'
+            })
+        })
+    }
+
+	window.addEventListener('load', replaceIcons)
+</script>
+<!-- Custom callout -->
+<style>
+.flipper-callout {
+    /* position: relative; */
+    padding: 2rem;
+    margin-left: 120px;
+    white-space: normal;
+    border: 1px solid #9BA3AF;
+    border-radius: 30px 30px 30px 5px;
+    --tw-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+.flipper-callout:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* left: -120px; */
+    left: 0;
+    height: 100px;
+    width: 106px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.flipper-callout.info:before, .flipper-callout.info .callout-icon {
+    background-image: url(https://cdn.flipper.net/callout-flipper-info.png);
+}
+.flipper-callout.warning:before, .flipper-callout.warning .callout-icon {
+    background-image: url(https://cdn.flipper.net/callout-flipper-warning.png);
+}
+.flipper-callout.dead:before, .flipper-callout.dead .callout-icon {
+    background-image: url(https://cdn.flipper.net/callout-flipper-dead.png);
+}
+
+.flipper-callout .callout-header {
+    display: block;
+    padding-bottom: 0.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+.flipper-callout .callout-header:empty {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .flipper-callout {
+        margin-left: 0;
+    }
+    .flipper-callout:before {
+        display: none;
+    }
+
+    .flipper-callout .callout-header {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-gap: 1rem;
+        align-items: center;
+    }
+    .callout-header .callout-icon {
+        width: 40px;
+        height: 35px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+</style>
+<!-- Plausible -->
+<script async defer data-domain="blog.flipper.net" src="https://analytics.flipp.dev/js/script.outbound-links.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<!-- Hack for Telegram Instant View -->
+<meta property="al:android:app_name" content="Medium" />

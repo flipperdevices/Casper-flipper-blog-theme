@@ -17,9 +17,10 @@
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
-    it should always be the last tag before the closing head tag --}}
-    {{ghost_head}}
+
+    {{!-- Code injection for <head> is stored in the theme instead of Ghost Admin
+         to avoid the ghost_head vulnerability. Edit: partials/code-injection/head.hbs --}}
+    {{> "code-injection/head"}}
 
     {{!-- GDPR Cookie Banner --}}
     <script type="text/javascript" charset="UTF-8" src="//geo.cookie-script.com/s/221577e1a230b6280dbf9ef981aa49af?country=gb&region=eu"></script>
@@ -483,8 +484,9 @@
 {{!-- Scripts - handle responsive videos, infinite scroll, floating headers, and galleries --}}
 <script src="{{asset "built/casper.js"}}" defer></script>
 
-{{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
-{{ghost_foot}}
+{{!-- Code injection for <body> end is stored in the theme instead of Ghost Admin
+     to avoid the ghost_foot vulnerability. Edit: partials/code-injection/foot.hbs --}}
+{{> "code-injection/foot"}}
 
 </body>
 </html>
